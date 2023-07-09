@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #00fd59;
+    border-bottom: 1px solid #37b600;
+    border-radius: 0;
+    margin-bottom: 0;
+    min-height: 50px;
+    padding: 0;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .navbar-brand {
+    color: #e60606;
+}
+
+.offcanvas.offcanvas-end {
+    width: 300px;
+    text-align: center;
+}

@@ -34,7 +34,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com', 'localhost', '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu101.gitpod.io']
 
-DISABLE_COLLECTSTATIC=1
 
 # Application definition
 
@@ -46,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    # 'fitness.apps.FitnessConfig',
     'cloudinary',
     'fitness',
 ]

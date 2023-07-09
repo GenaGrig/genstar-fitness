@@ -34,6 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com', 'localhost', '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu101.gitpod.io']
 
+DISABLE_COLLECTSTATIC=1
 
 # Application definition
 
@@ -45,8 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'fitness.apps.FitnessConfig',
     'cloudinary',
-    'fitness',
 ]
 
 MIDDLEWARE = [
@@ -129,13 +130,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
 
-STATICFILES_STORAGE= 'cloudinary_storage.storage.StaticHashedCloudin aryStorage'
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL='/media/'
-DEFAULT_FILE_STORAGE= 'cloudinary_storage.storage.MediaCloudinaryStor age'
+
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -58,3 +58,31 @@
     padding-left: 0;
     list-style: none;
 }
+
+
+.carousel-item {
+    height: 65vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h5 {
+    font-size: 4rem;
+    font-family: 'Kaushan Script', cursive;
+    background: #000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
+}
+
+.carousel-caption p {
+    font-size: 2rem;
+}

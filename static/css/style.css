@@ -74,7 +74,7 @@
 }
 
 .carousel-caption {
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
 }
 
@@ -88,6 +88,10 @@
 
 .carousel-caption p {
     font-size: 2rem;
+    font-family: 'Kaushan Script', cursive;
+    background: #000;
+    background: rgba(0, 0, 0, 0.5);
+    padding: .5rem;
 }
 
 /* Footer */

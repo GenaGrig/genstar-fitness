@@ -27,9 +27,9 @@
     {% comment %} Navigation Bar Links {% endcomment %}
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav nav-underline">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Membership</a>
@@ -86,49 +86,61 @@
 
 {% comment %} # Footer {% endcomment %}
 
-<footer class="bg-light text-center text-lg-start">
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 GenStar Fitness
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+{% comment %} <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">&copy; Genstar Fitness 2023</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    </ul>
+  </footer>
+</div> {% endcomment %}
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>GenStar Fitness</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+      </div>
+      <div class="col-md-3">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Workouts</a></li>
+          <li><a href="#">PT</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Terms and Conditions</h5>
+        <ul>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Follow Us</h5>
+        <ul>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
   </div>
-
-{% comment %} # Footer Links {% endcomment %}
-    
-      <div class="container p-4">
-     <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Footer Content</h5>
-    
-          <p>
-             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-             molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-             voluptatem veniam, est atque cumque eum delectus sint!
-          </p>
-        </div>
-
-{% comment %} # Footer Links {% endcomment %}
-
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Links</h5>
-    
-          <ul class="list-unstyled mb-0">
-            <li>
-              <a href="#!" class="text-dark">Link 1</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 2</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 3</a>
-            </li>
-            <li>
-              <a href="#!" class="text-dark">Link 4</a>
-            </li>
-          </ul>
-        </div>
-
 </footer>
-
 
 </body>
 </html>

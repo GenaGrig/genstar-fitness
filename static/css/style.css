@@ -1,3 +1,5 @@
+/* Navbar */
+
 .navbar {
     background-color: #0126fa;
     border-bottom: 1px solid #000000;
@@ -59,9 +61,10 @@
     list-style: none;
 }
 
+/* Carousel */
 
 .carousel-item {
-    height: 65vh;
+    height: 100vh;
     min-height: 350px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -86,3 +89,16 @@
 .carousel-caption p {
     font-size: 2rem;
 }
+
+/* Footer */
+
+footer {
+    padding: 2rem 0;
+    background-color: rgb(143, 203, 255);
+}
+
+footer a {
+    color: #ffffff;
+}
+
+

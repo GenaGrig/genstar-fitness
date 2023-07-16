@@ -10,5 +10,14 @@ class MainPageView(generic.TemplateView):
         context['title'] = 'Genstar'
         return context
     
+class MembershipView(generic.TemplateView):
+    template_name = 'membership.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Membership'
+        return context
+    
+
     
 

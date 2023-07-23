@@ -97,14 +97,9 @@
 /* Footer */
 
 footer {
-    padding: 2rem 0;
     background-color: rgb(71, 169, 255);
 }
 
 footer a {
     color: #ffffff;
-}
-
-#bootstrap-overrides h4 {
-    text-align: center;
 }

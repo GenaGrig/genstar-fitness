@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-md text-center">
+    <div class="d-flex flex-column justify-content-center">
+        <h1>Personal Trainer</h1>
+        <h5>Personal training or PT is a very good help as for beginners in gym as for more experienced
+            users.
+            Our PT will introduce you to the gym and help you to create a training program that suits you and your
+            goals.
+        </h5>
+    </div>
+    <hr>
+    <div class="d-flex align-items-center">
+        <div class="flex-shrink-0">
+            <img src="{% static 'img/trainer1resized.png' %}" alt="personal-trainer-picture"
+                class="img-thumbnail mx-auto">
+        </div>
+        <div class="flex-grow-1 ms-3">
+            <h5>Our personal trainers are here to help you reach your goals. They will help you with a
+                training program that is tailored to your needs and goals. They will also help you with
+                your diet and give you tips on how to live a healthier life. You can book a personal
+                trainer for a single session or for a longer period of time. If you are interested in
+                booking a personal trainer, please contact us.
+            </h5>
+        </div>
+    </div>
+</div> 
+<hr>
+
+<div class="md-6 text-center">
+    <h3>Any questions for PT?</h3>
+    <h5>Ask anything you like before signing up and booking your first PR session. </h5>
+</div>
+
+<form action="https://formdump.codeinstitute.net/" method="POST">
+    {% csrf_token %}
+    <div class="container-sm background-grey contact-form-pt" data-bs-theme="dark">
+        <div class="row">
+            <div class="col-md-4 text-bg-secondary p3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+            <div class="col-md-4 text-bg-secondary p3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+            <div class="col-md-8 text-bg-secondary p3">
+                <label for="subject" class="form-label">Subject</label>
+                <select class="form-select" id="subject" aria-label="Default select example">
+                    <option selected>Select subject</option>
+                    <option value="1">Loosing weight</option>
+                    <option value="2">Pregnancy training</option>
+                    <option value="3">Powerlifting</option>
+                    <option value="4">Other questions</option>
+                </select>
+            </div>
+            <div class="col-md-8 text-bg-secondary p3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Message" required></textarea>
+            </div>
+            <div class="col-md-8 text-bg-secondary p3">
+                <p></p>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary submit-pt" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

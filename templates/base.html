@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/membership.css' %}">
     <link rel="stylesheet" href="{% static 'css/workouts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/personal_trainer.css' %}">
     <script src="https://kit.fontawesome.com/fa2786a92a.js" crossorigin="anonymous"></script>
     <title>GenStar Fitness</title>
 </head>
@@ -40,7 +41,7 @@
           <a class="nav-link" href="{% url 'workouts' %}">Workouts</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">PT</a>
+          <a class="nav-link" href="{% url 'personal_trainer' %}">PT</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact Us</a>

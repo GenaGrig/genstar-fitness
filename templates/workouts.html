@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="md-6 text-center">
+    <h1>Workouts</h1>
+    <h5>In GenStar fitness we have a wide variety of different workouts that are suitable for different ages and body condition. </h5>
+</div>
+
+<div class="container-md text-center">
+    <div class="col-md-12">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item text-center">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <strong class="text-center">Body Attack &reg;</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="image">
+                            <img src="{% static 'img/group-bodyattack.jpg' %}" alt="image-bodyattack" class="image-fluid mx-auto">
+                        </div>
+                        <p>
+                            BODYATTACK® is a high-energy fitness class with moves that cater for total beginners to total addicts. 
+                            We combine athletic movements like running, lunging and jumping with strength exercises such as push-ups and squats. 
+                            An experienced instructor will pump out energizing tunes and lead you through the workout – challenging your limits in a good way, burning up to 730 calories* and leaving you with a sense of achievement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <strong class="text-center">Body Balance &reg;</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="image">
+                            <img src="{% static 'img/bodybalance-group.jpg' %}" alt="image-bodybalance" class="image-fluid mx-auto">
+                        </div>
+                        <p>
+                            BODYBALANCE® is a yoga-based class that will improve your mind, your body and your life.
+                            During BODYBALANCE an inspired soundtrack plays as you bend and stretch through a series of
+                            simple yoga moves and embrace elements of Tai Chi and Pilates.
+                            Breathing control is a part of all the exercises, and instructors will always provide options
+                            for those just getting started.
+                            You’ll strengthen your entire body and leave the class feeling calm and centered.
+                            Happy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <strong class="text-center">Body Combat &reg;</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="image">
+                            <img src="{% static 'img/group-bodycombat.jpg' %}" alt="image-bodycombat" class="image-fluid mx-auto">
+                        </div>
+                        <p>
+                            BODYCOMBAT® is a high-energy martial arts-inspired workout that is totally non-contact. 
+                            Punch and kick your way to fitness and burn up to 740 calories* in a class. 
+                            No experience needed. Learn moves from Karate, Taekwondo, Boxing, Muay Thai, Capoeira and Kung Fu. 
+                            Release stress, have a blast and feel like a champ. Bring your best fighter attitude and leave inhibitions at the door.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        <strong class="text-center">Body Pump &reg;</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="image">
+                            <img src="{% static 'img/group-bodypump.jpg' %}" alt="image-bodypump" class="image-fluid mx-auto">
+                        </div>
+                        <p>
+                            BODYPUMP® is a barbell workout for anyone looking to get lean, toned and fit – fast.
+                            Using light to moderate weights with lots of repetition, BODYPUMP gives you a total body
+                            workout. It will burn up to 540 calories*. Instructors will coach you through the
+                            scientifically-backed moves and techniques pumping out encouragement, motivation and great
+                            music – helping you achieve much more than on your own! You’ll leave the class feeling
+                            challenged and motivated, ready to come back for more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <strong class="text-center">Body Step &reg;</strong>
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div class="image">
+                            <img src="{% static 'img/group-bodystep.jpg' %}" alt="image-bodystep" class="image-fluid mx-auto">
+                        </div>
+                        <p>
+                            Basic stepping, just like walking up and down stairs, is at the heart of BODYSTEP™ – a full-body cardio workout to really tone your butt and thighs.
+                            In a BODYSTEP Athletic class you combine basic stepping with moves like burpees, push ups and weight plate exercises to work the upper body.
+                            If you fancy quicker stepping and the chance to showcase your rhythm and flair then BODYSTEP Classic is the way to go.
+                            There are always lots of options to get you through the workout safely.
+                            Our bubbly and approachable instructors coach you through the workout. We play invigorating, hit music and inject a whole lot of fun and personality along the way.
+                            You can burn up to 620 calories* and you’ll leave buzzing with satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

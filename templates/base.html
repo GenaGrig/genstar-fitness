@@ -22,13 +22,13 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'index' %}">GenStar Fitness</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+      aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    {% comment %} Navigation Bar Links {% endcomment %}
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+    <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvasLg"
+      aria-labelledby="navbarOffcanvasLgLabel">
       <ul class="navbar-nav nav-underline">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
@@ -59,19 +59,19 @@
           </ul>
         </li>
         {% comment %} <li class="nav-item">
-        {% if user.is_authenticated %}
+          {% if user.is_authenticated %}
           <a class="nav-link" href="#">Logout</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Profile</a>
         </li>
         {% else %} {% endcomment %}
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-unlock-keyhole"></i> Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-unlock-keyhole"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
+        </li>
         {% comment %} {% endif %} {% endcomment %}
       </ul>
     </div>

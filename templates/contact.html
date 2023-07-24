@@ -13,6 +13,18 @@
       <h5 class="text-center">Visit or contact us!</h5>
     </div>
   </div>
+</div>
+
+{% if message_name %}
+
+<center>
+  <h2>
+    Thanks {{ message_name }} for contacting us!
+  </h2>
+  <p>We received your email and will contact you as soon as possible!</p>
+</center>
+
+{% else %}
 
 <div class="container">
     <div class="col">
@@ -39,7 +51,8 @@
       </div>
 
       <div class="col" style="background-color: #47a9ff;">
-        <form action="">
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
             <div class="col-md-8 mt-3 offset-md-2">
                 <h5 class="text-center">Send us a message:</h5>
                 <div class="mb-3">
@@ -61,5 +74,5 @@
       </div>
     </div>
   </div>
-
+{% endif %}
 {% endblock %}

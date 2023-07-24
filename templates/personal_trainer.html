@@ -36,10 +36,10 @@
     <h5>Ask anything you like before signing up and booking your first PR session. </h5>
 </div>
 
-<form action="https://formdump.codeinstitute.net/" method="POST">
+<form action="{% url 'personal_trainer' %}" method="POST">
     {% csrf_token %}
     <div class="container-sm background-grey contact-form-pt" data-bs-theme="dark">
-        <div class="row">
+        <div class="row" style="margin-top: 10px;">
             <div class="col-md-4 text-bg-secondary p3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Name" required>

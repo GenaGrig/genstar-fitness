@@ -44,7 +44,7 @@
           <a class="nav-link" href="{% url 'personal_trainer' %}">PT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">FAQ</a>
@@ -59,25 +59,34 @@
             <li><a class="dropdown-item" href="#">GDPR</a></li>
           </ul>
         </li>
-        {% comment %} <li class="nav-item">
+        <li class="nav-item">
           {% if user.is_authenticated %}
-          <a class="nav-link" href="#">Logout</a>
+          <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" href="#"><i class="fa-regular fa-user"></i> Profile</a>
         </li>
-        {% else %} {% endcomment %}
+        {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-unlock-keyhole"></i> Login</a>
+          <a class="nav-link" href="{% url 'account_login' %}"><i class="fa-solid fa-unlock-keyhole"></i> Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
+          <a class="nav-link" href="{% url 'account_signup' %}"><i class="fa-solid fa-user-plus"></i> Sign Up</a>
         </li>
-        {% comment %} {% endif %} {% endcomment %}
+        {% endif %}
       </ul>
     </div>
   </div>
 </nav>
+
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+      </div>
 
 <main>
 
@@ -114,18 +123,18 @@
           <h5>Address:</h5>
           <h5 class="text-white"><strong>GenStar Fitness</strong></h5>
           <h5 class="text-white"><strong>Björnvägen 21</strong></h5>
-          <h5 class="text-white"><strong>90643 Umeå</strong></h5>
+          <h5 class="text-white"><strong>906 40 Umeå</strong></h5>
           <h5>Phone:</h5>
           <h5 class="text-white"><strong>090-123 45 67</strong></h5>
           <h5>Email:</h5>
           <h5 class="text-white"><strong><a href="mailto:genstarfitness@gmail.com">genstarfitness@gmail.com</a></strong></h5>
         </div>
-        <div class="col-md-3">
-          <h5>Follow Us</h5>
-          <ul>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
-            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+        <div class="col-md-4">
+          <h5>Follow Us:</h5>
+          <ul class="text-center" style="list-style-type: none">
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><h6> Twitter</h6></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><h6> Instagram</h6></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><h6> Facebook</h6></a></li>
           </ul>
         </div>
       </div>
@@ -137,6 +146,13 @@
     </div>
   </div>
 </footer>
+<script>
+  setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+  }, 3000);
+</script>
 
 </body>
 </html>

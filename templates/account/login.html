@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{%load crispy_forms_tags %}
+
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -22,11 +24,12 @@
     <div class="col">
       <div class="col-md-8 mt-3 offset-md-2 d-flex justify-content-center">
         <form class="login" method="POST" action="{% url 'account_login' %}">
+          {{ form|crispy }}
           {% csrf_token %}
-          {{ form.as_p }}
+          <!-- {{ form.as_p }}
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-          {% endif %}
+          {% endif %} -->
           <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
           <button class="btn btn-primary d-grid col-6 mx-auto" type="submit" style="margin-top: 10px; padding: 10px 30px;">{% trans "Sign In" %}</button>
         </form>

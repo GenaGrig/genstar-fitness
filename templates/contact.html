@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{%load crispy_forms_tags %}
+
 {% load static %}
 
 {% block head_title %}Contact{% endblock %}
@@ -53,6 +55,7 @@
       <div class="col" style="background-color: #47a9ff;">
         <form action="{% url 'contact' %}" method="POST">
             {% csrf_token %}
+            {{ form|crispy }}
             <div class="col-md-8 mt-3 offset-md-2">
                 <h5 class="text-center">Send us a message:</h5>
                 <div class="mb-3">

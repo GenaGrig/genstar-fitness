@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'media',
     'crispy_forms',
     'crispy_bootstrap5',
+    'booking',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

@@ -85,3 +85,12 @@ def contact(request):
         return render(request, 'contact.html', {'message_name': message_name})
     else:
         return render(request, 'contact.html', {})
+    
+    
+class BookingView(generic.TemplateView):
+    template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Booking'
+        return context

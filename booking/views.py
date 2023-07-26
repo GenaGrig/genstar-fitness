@@ -84,7 +84,7 @@ def bookingSubmit(request):
                                 time = time,
                             )
                             messages.success(request, "Appointment Saved!")
-                            return redirect('index')
+                            return redirect('userPanel')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
                     else:
@@ -249,3 +249,9 @@ def checkEditTime(times, day, id):
         if Appointment.objects.filter(day=day, time=k).count() < 1 or time == k:
             x.append(k)
     return x
+
+def delete_booking(request, id):
+    appointment = Appointment.objects.get(pk=id)
+    appointment.delete()
+    messages.success(request, "Booking Deleted!")
+    return redirect('userPanel')

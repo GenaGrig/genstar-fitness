@@ -17,11 +17,17 @@
         <div>
             <h3 class="">Select Service:</h3>
             <select class="form-select fs-3" name="service">
-                <option value="Doctor care">Doctor care</option>
-                <option value="Nursing care">Nursing care</option>
-                <option value="Medical social services">Medical social services</option>
-                <option value="Homemaker or basic assistance care">Homemaker or basic assistance care</option>
+                <option value="BODYATTACK">BODYATTACK</option>
+                <option value="BODYBALANCE">BODYBALANCE</option>
+                <option value="BODYCOMBAT">BODYCOMBAT</option>
+                <option value="BODYPUMP">BODYPUMP</option>
+                <option value="BODYSTEP">BODYSTEP</option>
             </select>
+            <!-- <select class="form-select fs-3" name="service">
+                {% for service in all_services %}
+                <option value="{{service}}">{{appointment.service}}</option>
+                {% endfor %}
+            </select> -->
         </div>
             <!--input day-->
             <div class="mt-3">

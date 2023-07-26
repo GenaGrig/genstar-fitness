@@ -3,6 +3,14 @@ from datetime import datetime, timedelta
 from .models import *
 from django.contrib import messages
 
+
+def service_view(request):
+    context = {
+        'all_services': Appointment.objects.filter(foo='bar').order_by('service').all
+        }
+    return render(request, 'booking.html', context=context)
+
+
 def index(request):
     return render(request, "index.html", {})
 
@@ -36,7 +44,7 @@ def booking(request):
 def bookingSubmit(request):
     user = request.user
     times = [
-        "3 PM", "3:30 PM", "4 PM", "4:30 PM", "5 PM", "5:30 PM", "6 PM", "6:30 PM", "7 PM", "7:30 PM"
+        "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
@@ -56,9 +64,9 @@ def bookingSubmit(request):
 
         if service != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Saturday' or date == 'Wednesday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday':
                     if Appointment.objects.filter(day=day).count() < 11:
-                        if Appointment.objects.filter(day=day, time=time).count() < 1:
+                        if Appointment.objects.filter(day=day, time=time).count() < 10:
                             AppointmentForm = Appointment.objects.get_or_create(
                                 user = user,
                                 service = service,
@@ -128,7 +136,7 @@ def userUpdate(request, id):
 def userUpdateSubmit(request, id):
     user = request.user
     times = [
-        "3 PM", "3:30 PM", "4 PM", "4:30 PM", "5 PM", "5:30 PM", "6 PM", "6:30 PM", "7 PM", "7:30 PM"
+        "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
@@ -149,7 +157,7 @@ def userUpdateSubmit(request, id):
 
         if service != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Saturday' or date == 'Wednesday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday':
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
                             AppointmentForm = Appointment.objects.filter(pk=id).update(
@@ -203,7 +211,7 @@ def validWeekday(days):
     for i in range (0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
-        if y == 'Monday' or y == 'Saturday' or y == 'Wednesday':
+        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday':
             weekdays.append(x.strftime('%Y-%m-%d'))
     return weekdays
     

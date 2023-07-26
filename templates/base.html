@@ -61,10 +61,10 @@
         </li>
         <li class="nav-item">
           {% if user.is_authenticated %}
-          <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
+          <a class="nav-link" href="{% url 'booking' %}"><i class="fa-regular fa-user"></i> Booking</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'booking' %}"><i class="fa-regular fa-user"></i> Booking</a>
+          <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
         </li>
         {% else %}
         <li class="nav-item">

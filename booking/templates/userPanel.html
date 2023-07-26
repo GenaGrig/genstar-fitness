@@ -1,4 +1,4 @@
-<title>User Panel</title>
+<title>GenStar Fitness</title>
 {% extends 'layout.html' %}
 {% load static %}
 {% block body %}
@@ -7,7 +7,7 @@
 
 
 {% if user.is_authenticated %}
-<h1 class=" ms-5 mt-5 ">User Panel</h1>
+<h1 class=" ms-5 mt-5 "> {{ user.username }} User Panel</h1>
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
     <h2 class="">User Info:</h2>
@@ -28,8 +28,11 @@
             <p class="list-group mt-2">Day: {{ appointment.day }}</p>
             <p class="list-group mt-2">Time: {{ appointment.time }}</p>
             <p class="list-group mt-2">Service: {{ appointment.service }}</p>
-            <div class="mt-3 mb-2">
-                <a class="btn btn-primary rounded-3 p-2" href="{% url 'userUpdate' appointment.id %}">Edit Appointment</a>
+            <div class="row" style="display: inline-block;">
+                <div class="mt-3 mb-2">
+                    <a class="btn btn-success rounded-3 p-2" href="{% url 'userUpdate' appointment.id %}">Edit Appointment</a>
+                    <a class="btn btn-danger rounded-3 p-2" href="{% url 'userUpdate' appointment.id %}">Delete Appointment</a>
+                </div>
             </div>
         </div>
         {% endfor %}

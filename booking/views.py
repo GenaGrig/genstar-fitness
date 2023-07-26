@@ -15,8 +15,8 @@ def index(request):
     return render(request, "index.html", {})
 
 def booking(request):
-    #Calling 'validWeekday' Function to Loop days you want in the next 21 days:
-    weekdays = validWeekday(22)
+    #Calling 'validWeekday' Function to Loop days you want in the next 30 days:
+    weekdays = validWeekday(30)
 
     #Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
@@ -26,7 +26,7 @@ def booking(request):
         service = request.POST.get('service')
         day = request.POST.get('day')
         if service == None:
-            messages.success(request, "Please Select A Service!")
+            messages.success(request, "Please Select A Workout!")
             return redirect('booking')
 
         #Store day and service in django session:
@@ -44,7 +44,17 @@ def booking(request):
 def bookingSubmit(request):
     user = request.user
     times = [
-        "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00"
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
@@ -64,7 +74,7 @@ def bookingSubmit(request):
 
         if service != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 10:
                             AppointmentForm = Appointment.objects.get_or_create(
@@ -157,7 +167,7 @@ def userUpdateSubmit(request, id):
 
         if service != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday':
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
                     if Appointment.objects.filter(day=day).count() < 11:
                         if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
                             AppointmentForm = Appointment.objects.filter(pk=id).update(
@@ -211,7 +221,7 @@ def validWeekday(days):
     for i in range (0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
-        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday':
+        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday' or y == 'Thursday' or y == 'Friday':
             weekdays.append(x.strftime('%Y-%m-%d'))
     return weekdays
     

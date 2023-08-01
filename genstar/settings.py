@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'booking',
+    'schedule',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -109,6 +110,10 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.template.context_processors.request",
+    )
 
 WSGI_APPLICATION = 'genstar.wsgi.application'
 

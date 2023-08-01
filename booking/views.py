@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
 from .models import *
 from django.contrib import messages
+from schedule.models import Event
 
 
 def service_view(request):
@@ -255,3 +256,9 @@ def delete_booking(request, id):
     appointment.delete()
     messages.success(request, "Booking Deleted!")
     return redirect('userPanel')
+
+def delete_booking_staff(request, id):
+    appointment = Appointment.objects.get(pk=id)
+    appointment.delete()
+    messages.success(request, "Booking Deleted!")
+    return redirect('staffPanel')

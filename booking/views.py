@@ -147,7 +147,7 @@ def userUpdate(request, id):
 def userUpdateSubmit(request, id):
     user = request.user
     times = [
-        "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
+        "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00"
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
@@ -178,7 +178,7 @@ def userUpdateSubmit(request, id):
                                 time = time,
                             ) 
                             messages.success(request, "Appointment Edited!")
-                            return redirect('index')
+                            return redirect('userPanel')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
                     else:

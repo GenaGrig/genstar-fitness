@@ -22,6 +22,7 @@
               <th class="text-center" scope="col">Workout</th>
               <th class="text-center" scope="col">Date</th>
               <th class="text-center" scope="col">Time</th>
+              <th class="text-center" scope="col">Delete</th>
             </tr>
           </thead>
           <tbody id="myTable">
@@ -32,6 +33,7 @@
               <td class="text-center">{{item.service}}</td>
               <td class="text-center">{{item.day}}</td>
               <td class="text-center">{{item.time}}</td>
+              <td class="text-center"><a class="btn btn-danger" href="{% url 'delete_staff' item.id %}">Delete</a></td>
             </tr>
               {% endfor %}
           </tbody>

@@ -39,19 +39,8 @@
 
             <div class="mt-3">
                 <h3 class="">Select Date:</h3>
-                <input type="text" class="form-select fs-3 calendar" data-provide="datepicker-inline" data-date-format="yyyy-mm-dd" placeholder="Select Date" name="day">
+                <input type="text" class="form-select fs-3 calendar" data-provide="datepicker-inline" data-date-format="yyyy-mm-dd" placeholder="Select Date" name="day" required>
             </div>
-
-            <!--input time-->
-        <h3 class="fPersian mt-4">Time:</h3>
-        <div>
-            <select class="form-select fs-3 text-center" name="time">
-                {% for time in times %}
-                <option value="{{time}}">{{time}}</option>
-                {% endfor %}
-            </select>
-        </div>
-
 
             <br/>
             <button type="submit" class="btn btn-primary text-white">Continue</button>

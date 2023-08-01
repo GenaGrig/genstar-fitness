@@ -7,8 +7,6 @@
 
 
 {% if user.is_authenticated %}
-<!--if 12hrs before nobat-->
-{% if delta12 == True %}
 <h1 class="text-center  mt-3">Edit Booking</h1>
 
 <div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
@@ -27,13 +25,18 @@
             </select>
         </div>
             <!--input day-->
-            <div class="mt-3">
+            <!-- <div class="mt-3">
                 <h3 class="">Select Day:</h3>
                 <select class="form-select fs-3" name="day">
                     {% for validateWeekday in validateWeekdays %}
                     <option value="{{validateWeekday}}">{{validateWeekday}}</option>
                     {% endfor %}
                 </select>
+            </div> -->
+
+            <div class="mt-3">
+                <h3 class="">Select Date:</h3>
+                <input type="text" class="form-select fs-3 calendar" data-provide="datepicker-inline" data-date-format="yyyy-mm-dd" placeholder="Select Date" name="day" required>
             </div>
 
             <br/>
@@ -41,15 +44,6 @@
         </div>
     </form>
 </div>
-<!--else if its 12hrs before editing-->
-{% else %}
-
-<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black m-5 text-center fPersian">
-    <h1 class="text-danger">Editing Bookings Is Only Available 12hrs Before Workout start!</h1>
-    <a href="{% url 'userPanel' %}" class="btn btn-primary mt-5">Return To User Panel</a>
-</div>
-
-{% endif %}
 
 
 {% else %}

@@ -9,7 +9,7 @@
 {% if user.is_authenticated %}
 <h1 class=" ms-5 mt-5 "> {{ user.username }} User Panel</h1>
 
-<div class="shadow p-4 mb-5 bg-body bg-body rounded text-black  m-5 ">
+<div class="shadow p-4 mb-3 bg-body bg-body rounded text-black  m-5 ">
     <h2 class="">User Info:</h2>
     <ul class="list-group fs-4 mt-3">
             <li class="list-group mt-2">First Name: {{ user.first_name }}</li>
@@ -19,8 +19,8 @@
     </ul>
 </div>
 
-<!--Appointment Loop-->
-{% if appointments.count > 0 %}
+<!-- Appointment Loop-->
+<!-- {% if appointments.count > 0 %}
 <div class="mt-5 ">
     <h1 class=" ms-5">My bookings:</h1>
     <div class="shadow p-4 mb-3 bg-body bg-body rounded text-black  m-5">
@@ -39,8 +39,38 @@
         {% endfor %}
     </div>
 </div>
-{% endif %}
-<!--End Appointment Loop-->
+{% endif %} -->
+<!--End Appointment Loop -->
+
+<div class="shadow p-4 mb-5 mt-1 bg-body bg-body rounded text-black m-5">
+    <h1 class="text-center mt-5 mb-5">My bookings</h1>
+    <hr>
+    <div class="table-responsive-md border border-dark">
+        <table class="table table-secondary table-bordered border-black table-striped table-hover mx-auto">
+            <thead>
+                <tr class="table-primary border-dark">
+                    <th class="text-center" scope="col">Workout</th>
+                    <th class="text-center" scope="col">Date</th>
+                    <th class="text-center" scope="col">Time</th>
+                    <th class="text-center" scope="col">Edit / Delete</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                {% for appointment in appointments %}
+                <tr class="border-white">
+                    <td class="text-center">{{appointment.service}}</td>
+                    <td class="text-center">{{appointment.day}}</td>
+                    <td class="text-center">{{appointment.time}}</td>
+                    <td class="text-center"><a class="btn btn-success" href="{% url 'userUpdate' appointment.id %}">Edit
+                            booking</a>
+                        <a class="btn btn-danger" href="{% url 'delete_staff' appointment.id %}">Delete booking</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 
 {% else %}
 

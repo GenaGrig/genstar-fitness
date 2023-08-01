@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
 from .models import *
 from django.contrib import messages
-from schedule.models import Event
+from django.db.models import Count
+from .models import BookingSlots
+from .forms import BookingForm
 
 
 def service_view(request):
@@ -21,7 +23,6 @@ def booking(request):
 
     #Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
-    
 
     if request.method == 'POST':
         service = request.POST.get('service')
@@ -38,8 +39,8 @@ def booking(request):
 
 
     return render(request, 'booking.html', {
-            'weekdays':weekdays,
-            'validateWeekdays':validateWeekdays,
+            'weekdays': weekdays,
+            'validateWeekdays': validateWeekdays,
         })
 
 def bookingSubmit(request):
@@ -76,8 +77,8 @@ def bookingSubmit(request):
         if service != None:
             if day <= maxDate and day >= minDate:
                 if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
-                    if Appointment.objects.filter(day=day).count() < 11:
-                        if Appointment.objects.filter(day=day, time=time).count() < 10:
+                    if Appointment.objects.filter(day=day).count() < 20:
+                        if Appointment.objects.filter(day=day, time=time).count() < 20:
                             AppointmentForm = Appointment.objects.get_or_create(
                                 user = user,
                                 service = service,
@@ -226,6 +227,7 @@ def validWeekday(days):
             weekdays.append(x.strftime('%Y-%m-%d'))
     return weekdays
     
+
 def isWeekdayValid(x):
     validateWeekdays = []
     for j in x:
@@ -237,7 +239,7 @@ def checkTime(times, day):
     #Only show the time of the day that has not been selected before:
     x = []
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 1:
+        if Appointment.objects.filter(day=day, time=k).count() < 20:
             x.append(k)
     return x
 
@@ -247,7 +249,7 @@ def checkEditTime(times, day, id):
     appointment = Appointment.objects.get(pk=id)
     time = appointment.time
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 1 or time == k:
+        if Appointment.objects.filter(day=day, time=k).count() < 20 or time == k:
             x.append(k)
     return x
 
@@ -262,3 +264,21 @@ def delete_booking_staff(request, id):
     appointment.delete()
     messages.success(request, "Booking Deleted!")
     return redirect('staffPanel')
+
+
+def is_booking_allowed(workout_type, date, time_slot):
+    # Count existing bookings for the given workout type, date, and time slot
+    existing_bookings_count = Appointments.objects.filter(
+        workout_type=workout_type,
+        date=date,
+        time_slot=time_slot,
+    ).count()
+
+    # Set the maximum booking limit per hour for each workout type
+    max_booking_limit = 20
+
+    # Check if the booking limit has been reached
+    if existing_bookings_count >= max_booking_limit:
+        return False
+    else:
+        return True

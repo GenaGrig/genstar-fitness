@@ -1,0 +1,11 @@
+.datepicker {
+    background-color: white;
+    border: 1px solid #000000;
+}
+
+.datepicker td,th {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 20px;
+}
+

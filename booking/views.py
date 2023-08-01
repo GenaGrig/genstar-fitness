@@ -84,7 +84,7 @@ def bookingSubmit(request):
                                 day = day,
                                 time = time,
                             )
-                            messages.success(request, "Appointment Saved!")
+                            messages.success(request, "Booking Saved!")
                             return redirect('userPanel')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
@@ -95,7 +95,7 @@ def bookingSubmit(request):
             else:
                     messages.success(request, "The Selected Date Isn't In The Correct Time Period!")
         else:
-            messages.success(request, "Please Select A Service!")
+            messages.success(request, "Please Select A Workout!")
 
 
     return render(request, 'bookingSubmit.html', {
@@ -177,7 +177,7 @@ def userUpdateSubmit(request, id):
                                 day = day,
                                 time = time,
                             ) 
-                            messages.success(request, "Appointment Edited!")
+                            messages.success(request, "Booking Edited!")
                             return redirect('userPanel')
                         else:
                             messages.success(request, "The Selected Time Has Been Reserved Before!")
@@ -188,7 +188,7 @@ def userUpdateSubmit(request, id):
             else:
                     messages.success(request, "The Selected Date Isn't In The Correct Time Period!")
         else:
-            messages.success(request, "Please Select A Service!")
+            messages.success(request, "Please Select A Workout!")
         return redirect('userPanel')
 
 

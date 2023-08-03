@@ -255,22 +255,11 @@ def checkEditTime(times, day, id):
             x.append(k)
     return x
 
-# def delete_booking(request, id):
-#     appointment = Appointment.objects.get(pk=id)
-#     appointment.delete()
-#     messages.success(request, "Booking Deleted!")
-#     return redirect('userPanel')
-
-
 def delete_booking(request, id):
-    if request.method == 'DELETE':
-        # Fetch the booking using booking_id
-        appointment = get_object_or_404(Appointment, id=appointment.id)
-        # Perform the delete operation
-        appointment.delete()
-        return JsonResponse({'message': 'Booking deleted successfully.'})
-    else:
-        return JsonResponse({'message': 'Invalid request method.'}, status=400)
+    appointment = Appointment.objects.get(pk=id)
+    appointment.delete()
+    messages.success(request, "Booking Deleted!")
+    return redirect('userPanel')
 
 
 def delete_booking_staff(request, id):

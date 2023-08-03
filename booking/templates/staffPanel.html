@@ -35,14 +35,38 @@
               <td class="text-center">{{item.service}}</td>
               <td class="text-center">{{item.day}}</td>
               <td class="text-center">{{item.time}}</td>
-              <td class="text-center"><a class="btn btn-danger" href="{% url 'delete_staff' item.id %}">Delete</a></td>
+              <td class="text-center">
+              <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{item.id}}">Delete booking</button></td>
             </tr>
               {% endfor %}
           </tbody>
         </table>
       </div>
-
 </div>
+
+{% for item in items %}
+<!-- Modal -->
+<div class="modal fade" id="confirmDeleteModal_{{item.id}}" tabindex="-1" caller-id="" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document"">
+        <div class="modal-content confirm-delete">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm Delete</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fw-bold">
+                Are you sure you want to delete this booking?
+            </div>
+            <div class="text-center fs-5">
+                {{item.service}} {{item.day}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger" href="{% url 'delete_staff' item.id %}">Delete booking</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
 {% else %}
 

@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from datetime import datetime, timedelta
 from .models import *
 from django.contrib import messages
 from django.db.models import Count
 from .models import BookingSlots
 from .forms import BookingForm
+from django.http import JsonResponse
+
 
 
 def service_view(request):
@@ -253,11 +255,23 @@ def checkEditTime(times, day, id):
             x.append(k)
     return x
 
+# def delete_booking(request, id):
+#     appointment = Appointment.objects.get(pk=id)
+#     appointment.delete()
+#     messages.success(request, "Booking Deleted!")
+#     return redirect('userPanel')
+
+
 def delete_booking(request, id):
-    appointment = Appointment.objects.get(pk=id)
-    appointment.delete()
-    messages.success(request, "Booking Deleted!")
-    return redirect('userPanel')
+    if request.method == 'DELETE':
+        # Fetch the booking using booking_id
+        appointment = get_object_or_404(Appointment, id=appointment.id)
+        # Perform the delete operation
+        appointment.delete()
+        return JsonResponse({'message': 'Booking deleted successfully.'})
+    else:
+        return JsonResponse({'message': 'Invalid request method.'}, status=400)
+
 
 def delete_booking_staff(request, id):
     appointment = Appointment.objects.get(pk=id)

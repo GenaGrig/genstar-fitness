@@ -43,6 +43,16 @@
                 data-date-today-highlight="true" data-date-days-of-week-highlighted="0,6" data-date-week-start="1" data-date-today-btn="true" data-date-autoclose="true" required>
             </div>
 
+            <!--input time-->
+            <h3 class="mt-4">Time:</h3>
+            <div>
+                <select class="form-select fs-3 text-center" name="time">
+                    {% for time in times %}
+                    <option value="{{time}}">{{time}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
             <br/>
             <button type="submit" class="btn btn-primary text-white">Continue</button>
         </div>

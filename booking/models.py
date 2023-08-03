@@ -52,3 +52,17 @@ class BookingSlots(models.Model):
     def __str__(self):
         return f"{self.workout_type} | {self.date} | {self.time_slot}"
     
+    
+class Membership(models.Model):
+    MEMBERSHIP_CHOICES = [
+        ("Standart", "Standart"),
+        ("Student", "Student"),
+        ("All_Inclusive", "All_Inclusive"),
+    ]
+    
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    membership_type = models.CharField(max_length=50, choices=MEMBERSHIP_CHOICES)
+    date_ordered = models.DateTimeField(default=datetime.now, blank=True)
+    
+    def __str__(self):
+        return f"{self.user.username} | {self.membership_type}"

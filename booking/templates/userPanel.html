@@ -43,7 +43,7 @@
 <!--End Appointment Loop -->
 
 <div class="shadow p-4 mb-5 mt-1 bg-body bg-body rounded text-black m-5">
-    <h1 class="text-center mt-5 mb-5">My bookings</h1>
+    <h1 class="text-center mt-5 mb-5">My bookings:</h1>
     <hr>
     <div class="table-responsive-md border border-dark">
         <table class="table table-secondary table-bordered border-black table-striped table-hover mx-auto">
@@ -63,7 +63,7 @@
                     <td class="text-center">{{appointment.time}}</td>
                     <td class="text-center"><a class="btn btn-success" href="{% url 'userUpdate' appointment.id %}">Edit
                             booking</a>
-                        <a class="btn btn-danger" href="{% url 'delete_staff' appointment.id %}">Delete booking</a>
+                        <a class="btn btn-danger" href="{% url 'delete' appointment.id %}">Delete booking</a>
                     </td>
                 </tr>
                 {% endfor %}

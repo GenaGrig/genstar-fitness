@@ -11,4 +11,5 @@ urlpatterns = [
     path('staff-panel', views.staffPanel, name='staffPanel'),
     path('delete_booking/<int:id>', views.delete_booking, name='delete'),
     path('delete_booking_staff/<int:id>', views.delete_booking_staff, name='delete_staff'),
+    path('update_profile/', views.update_profile, name='update_profile'),
 ]

@@ -1,6 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.core.mail import send_mail
+from django.contrib.auth import authenticate, login, logout
+from .forms import SignUpForm
+from django.contrib.auth.models import User
+from django import forms
+from django.contrib import messages
 
 
 class MainPageView(generic.TemplateView):
@@ -94,3 +99,23 @@ class BookingView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Booking'
         return context
+
+
+def register_user(request):
+    form = SignUpForm()
+    if request.method == 'POST':
+        form = SignUpForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            # email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password1')
+            first_name = form.cleaned_data.get('first_name')
+            last_name = form.cleaned_data.get('last_name')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, "Your Account Has Been Created!")
+            return redirect('userPanel')
+    else:
+        form = SignUpForm()
+    return render(request, 'register.html', {'form': form})

@@ -15,8 +15,8 @@
     <div class="col-md-8 mt-3 offset-md-2">
       <h1>{% trans "Sign In" %}</h1>
   
-      <h5 class="text-center">{% blocktrans %}If you have not created an account yet, then please
-        <a href="{{ signup_url }}">create new account</a> first.{% endblocktrans %}
+      <h5 class="text-center">If you have not created an account yet, then please
+        <a href="{% url 'register' %}">create new account</a> first.
       </h5>
     </div>
   </div>

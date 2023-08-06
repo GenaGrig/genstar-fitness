@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%load crispy_forms_tags %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Update Profile" %}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="col">
+    <div class="col-md-8 mt-3 offset-md-2">
+
+      <h1>{% trans "Update Profile" %}</h1>
+
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="col-md-8 mt-3 offset-md-2 d-flex justify-content-center">
+      <form class="signup" id="signup_form" method="post" action="{% url 'update_profile' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <!-- {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %} -->
+        <button type="submit" class="btn btn-primary d-grid col-8 mb-5 mx-auto">{% trans "Update Profile" %} &raquo;</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -50,14 +50,14 @@
               <a class="nav-link active cHover" href="{% url 'staffPanel' %}">Staff Panel</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active cHover" href="{% url 'userPanel' %}">{{request.user.username}} Panel</a>
+              <a class="nav-link active cHover" href="{% url 'userPanel' %}">{{request.user.username}} Profile</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="nav-link active cHover" href="{% url 'userPanel' %}">{{request.user.username}} Panel</a>
+              <a class="nav-link active cHover" href="{% url 'userPanel' %}">{{request.user.username}} Profile</a>
             </li>
             <!--Logout Link-->
             <li class="nav-item">

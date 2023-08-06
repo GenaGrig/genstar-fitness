@@ -2,6 +2,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 
 
 class SignUpForm(UserCreationForm):
@@ -46,12 +47,18 @@ class SignUpForm(UserCreationForm):
         self.fields['password2'].label = ''
         self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
         
-        def save(self, commit=True):
-            user = super(SignUpForm, self).save(commit=False)
-            user.first_name = self['first_name']
-            user.last_name = self['last_name']
+    def save(self, commit=True):
+        user = super(SignUpForm, self).save(commit=False)
+        user.first_name = self.cleaned_data['first_name']
+        user.last_name = self.cleaned_data['last_name']
+        user.email = self.cleaned_data['email']
+        
+        if commit:
+            user.save()
             
-            if commit:
-                user.save()
-                
-            return user
+        return user
+
+
+# class User(AbstractUser):
+#     first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}), required=True)
+#     last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}), required=True)

@@ -61,12 +61,11 @@
             <tbody id="myTable">
                 {% for appointment in appointments %}
                 <tr class="border-white">
-                    <td class="text-center">{{appointment.service}}</td>
+                    <td class="text-center">{{appointment.workout}}</td>
                     <td class="text-center">{{appointment.day}}</td>
                     <td class="text-center">{{appointment.time}}</td>
                     <td class="text-center"><a class="btn btn-success" href="{% url 'userUpdate' appointment.id %}">Edit
                             booking</a>
-                        <!-- <a class="btn btn-danger" href="{% url 'delete' appointment.id %}">Delete booking</a> -->
                         <button type="button" class="btn btn-danger confirm-delete" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{appointment.id}}">Delete booking</button>
                     </td>
                 </tr>
@@ -89,7 +88,7 @@
                 Are you sure you want to delete this booking?
             </div>
             <div class="text-center fs-5">
-                {{appointment.service}} {{appointment.day}}
+                {{appointment.workout}} {{appointment.day}} {{appointment.time}}
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>

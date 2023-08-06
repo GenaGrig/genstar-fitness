@@ -4,14 +4,14 @@ from .models import *
 from django.contrib import messages
 from django.db.models import Count
 from django.contrib.auth import authenticate, login, logout
-from .forms import SignUpForm
+from .forms import SignUpForm, MyUserChangeForm
 from django.contrib.auth.models import User
 
 
 
-def service_view(request):
+def workout_view(request):
     context = {
-        'all_services': Appointment.objects.filter(foo='bar').order_by('service').all
+        'all_workouts': Appointment.objects.filter(foo='bar').order_by('workout').all
         }
     return render(request, 'booking.html', context=context)
 
@@ -27,15 +27,15 @@ def booking(request):
     validateWeekdays = isWeekdayValid(weekdays)
 
     if request.method == 'POST':
-        service = request.POST.get('service')
+        workout = request.POST.get('workout')
         day = request.POST.get('day')
-        if service == None:
+        if workout == None:
             messages.success(request, "Please Select A Workout!")
             return redirect('booking')
 
         #Store day and service in django session:
         request.session['day'] = day
-        request.session['service'] = service
+        request.session['workout'] = workout
 
         return redirect('bookingSubmit')
 
@@ -68,7 +68,7 @@ def bookingSubmit(request):
 
     #Get stored data from django session:
     day = request.session.get('day')
-    service = request.session.get('service')
+    workout = request.session.get('workout')
     
     #Only show the time of the day that has not been selected before:
     hour = checkTime(times, day)
@@ -76,14 +76,14 @@ def bookingSubmit(request):
         time = request.POST.get("time")
         date = dayToWeekday(day)
 
-        if service != None:
+        if workout != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
-                    if Appointment.objects.filter(day=day).count() < 20:
-                        if Appointment.objects.filter(day=day, time=time).count() < 20:
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday' or date == 'Saturday' or date == 'Sunday':
+                    if Appointment.objects.filter(day=day).count() < 30:
+                        if Appointment.objects.filter(day=day, time=time).count() < 30:
                             AppointmentForm = Appointment.objects.get_or_create(
                                 user = user,
-                                service = service,
+                                workout = workout,
                                 day = day,
                                 time = time,
                             )
@@ -130,12 +130,12 @@ def userUpdate(request, id):
     
 
     if request.method == 'POST':
-        service = request.POST.get('service')
+        workout = request.POST.get('workout')
         day = request.POST.get('day')
 
         #Store day and service in django session:
         request.session['day'] = day
-        request.session['service'] = service
+        request.session['workout'] = workout
 
         return redirect('userUpdateSubmit', id=id)
 
@@ -159,7 +159,7 @@ def userUpdateSubmit(request, id):
     maxDate = strdeltatime
 
     day = request.session.get('day')
-    service = request.session.get('service')
+    service = request.session.get('workout')
     
     #Only show the time of the day that has not been selected before and the time he is editing:
     hour = checkEditTime(times, day, id)
@@ -169,14 +169,14 @@ def userUpdateSubmit(request, id):
         time = request.POST.get("time")
         date = dayToWeekday(day)
 
-        if service != None:
+        if workout != None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday':
-                    if Appointment.objects.filter(day=day).count() < 11:
-                        if Appointment.objects.filter(day=day, time=time).count() < 1 or userSelectedTime == time:
+                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday' or date == 'Saturday' or date == 'Sunday':
+                    if Appointment.objects.filter(day=day).count() < 30:
+                        if Appointment.objects.filter(day=day, time=time).count() < 30 or userSelectedTime == time:
                             AppointmentForm = Appointment.objects.filter(pk=id).update(
                                 user = user,
-                                service = service,
+                                workout = workout,
                                 day = day,
                                 time = time,
                             ) 
@@ -225,7 +225,7 @@ def validWeekday(days):
     for i in range (0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
-        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday' or y == 'Thursday' or y == 'Friday':
+        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday' or y == 'Thursday' or y == 'Friday' or y == 'Saturday' or y == 'Sunday':
             weekdays.append(x.strftime('%Y-%m-%d'))
     return weekdays
     
@@ -233,7 +233,7 @@ def validWeekday(days):
 def isWeekdayValid(x):
     validateWeekdays = []
     for j in x:
-        if Appointment.objects.filter(day=j).count() < 10:
+        if Appointment.objects.filter(day=j).count() < 30:
             validateWeekdays.append(j)
     return validateWeekdays
 
@@ -241,7 +241,7 @@ def checkTime(times, day):
     #Only show the time of the day that has not been selected before:
     x = []
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 20:
+        if Appointment.objects.filter(day=day, time=k).count() < 30:
             x.append(k)
     return x
 
@@ -251,7 +251,7 @@ def checkEditTime(times, day, id):
     appointment = Appointment.objects.get(pk=id)
     time = appointment.time
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 20 or time == k:
+        if Appointment.objects.filter(day=day, time=k).count() < 30 or time == k:
             x.append(k)
     return x
 
@@ -287,17 +287,30 @@ def is_booking_allowed(workout_type, date, time_slot):
         return True
 
 
+# def update_profile(request):
+#     if request.user.is_authenticated:
+#         current_user = User.objects.get(id=request.user.id)
+#         form = SignUpForm(request.POST or None, request.FILES or None, instance=current_user)
+#         if form.is_valid():
+#             form.save()
+#             login(request, current_user)
+#             messages.success(request, "Your Profile Has Been Updated!")
+#             return redirect('userPanel')
+#         return render(request, 'update_profile.html', {'form': form})
+#     else:
+#         messages.success(request, "Please Login First!")
+#         return redirect('account_login')
+
+
 def update_profile(request):
     if request.user.is_authenticated:
-        current_user = User.objects.get(pk=request.user.id)
-        form = SignUpForm(request.POST or None, request.FILES or None, instance=current_user)
+        current_user = User.objects.get(id=request.user.id)
+        form = MyUserChangeForm(request.POST or None, request.FILES or None, instance=current_user)
         if form.is_valid():
             form.save()
-            login(request, current_user)
             messages.success(request, "Your Profile Has Been Updated!")
             return redirect('userPanel')
         return render(request, 'update_profile.html', {'form': form})
     else:
         messages.success(request, "Please Login First!")
         return redirect('account_login')
-    return render(request, 'update_profile.html', {})

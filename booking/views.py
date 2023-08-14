@@ -288,21 +288,6 @@ def is_booking_allowed(workout_type, date, time_slot):
         return True
 
 
-# def update_profile(request):
-#     if request.user.is_authenticated:
-#         current_user = User.objects.get(id=request.user.id)
-#         form = SignUpForm(request.POST or None, request.FILES or None, instance=current_user)
-#         if form.is_valid():
-#             form.save()
-#             login(request, current_user)
-#             messages.success(request, "Your Profile Has Been Updated!")
-#             return redirect('userPanel')
-#         return render(request, 'update_profile.html', {'form': form})
-#     else:
-#         messages.success(request, "Please Login First!")
-#         return redirect('account_login')
-
-
 def update_profile(request):
     if request.user.is_authenticated:
         current_user = User.objects.get(id=request.user.id)

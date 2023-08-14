@@ -29,42 +29,52 @@
 </head>
 
 <body>
-  <header>
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">GenStar Fitness</a>
+        <a class="navbar-brand mt-2" href="{% url 'index' %}">GenStar Fitness</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
           aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link active cHover" aria-current="page" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="nav-item nav-link-active">
-              <a class="nav-link active cHover" href="{% url 'booking' %}">Book Workout</a>
-            </li>
-            {% if user.is_staff %}
-            <li class="nav-item">
-              <a class="nav-link active cHover" href="{% url 'staffPanel' %}">Staff Panel</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active cHover" href="{% url 'userPanel' %}">{{request.user.username}} Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="nav-link active cHover" href="{% url 'userPanel' %}">{{request.user.username}} Profile</a>
-            </li>
-            <!--Logout Link-->
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i> Logout</a>
-            </li>
-            {% endif %}
-          </ul>
+        <i class="fa-solid fa-person-walking fa-flip mt-2" style="color: #ffffff;"></i>
+        <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvasLg"
+          aria-labelledby="navbarOffcanvasLgLabel">
+          <div class="offcanvas-header" style="justify-content: space-evenly;">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GenStar Fitness</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body navbar-nav">
+            <ul class="navbar-nav nav-underline flex-grow-1 mt-3">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'booking' %}">Book Workout</a>
+              </li>
+              {% if user.is_staff %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'staffPanel' %}">Staff Panel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'userPanel' %}">{{request.user.username}} Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"
+                    style="color: #ffffff;"></i> Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'userPanel' %}">{{request.user.username}} Profile</a>
+              </li>
+              <!--Logout Link-->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"
+                    style="color: #ffffff;"></i> Logout</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -82,8 +92,6 @@
     </div>
     {% endif %}
     <!--Messages End-->
-
-  </header>
 
 
   {% block body %}

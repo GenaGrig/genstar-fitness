@@ -76,6 +76,18 @@
     background-color: #0126fa;
 }
 
+.offcanvas-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #000000;
+}
+
+.offcanvas-title {
+    margin: 0;
+}
+
 /* Carousel */
 
 .carousel-item {

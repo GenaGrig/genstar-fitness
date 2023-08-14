@@ -256,6 +256,7 @@ def checkEditTime(times, day, id):
     return x
 
 def delete_booking(request, id):
+    '''Delete a booking from the database'''
     appointment = Appointment.objects.get(pk=id)
     appointment.delete()
     messages.success(request, "Booking Deleted!")

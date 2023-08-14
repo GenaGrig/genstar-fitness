@@ -8,7 +8,7 @@
 
 <div class="container">
   <div class="col">
-    <div class="col-md-8 mt-3 offset-md-2">
+    <div class="col-md-8 offset-md-2" style="margin-top: 5rem; margin-bottom: 4rem">
 
 
       <h1>{% trans "Sign Out" %}</h1>
@@ -26,7 +26,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-primary d-grid col-4 mx-auto">{% trans 'Sign Out' %}</button>
+        <button type="submit" class="btn btn-primary d-grid col-4 mx-auto" style="margin-bottom: 4rem;">{% trans 'Sign Out' %}</button>
       </form>
 
     </div>

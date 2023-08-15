@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{%load crispy_forms_tags %}
-
 {% load static %}
 
-{% block head_title %}Contact{% endblock %}
+{%load crispy_forms_tags %}
+
+{% block head_title %} Contact {% endblock %}
 
 {% block content %}
 
@@ -29,7 +29,7 @@
 {% else %}
 
 <div class="container">
-    <div class="col">
+    <div class="col google-map">
         <div class="col-md-8 mt-2 offset-md-1">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1758.5483644937285!2d20.32015998927918!3d63.84768114553425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c5b283b59d7df%3A0x7d30d380ae230eef!2zQmrDtnJudsOkZ2VuIDIxLCA5MDYgNDAgVW1lw6U!5e0!3m2!1sru!2sse!4v1690200814010!5m2!1sru!2sse"
@@ -70,8 +70,8 @@
                     <label for="message" class="form-label" style="color: aliceblue;">Message</label>
                     <textarea class="form-control" id="message" rows="3" placeholder="Your message here..." required></textarea>
                 </div>
-                <button class="btn btn-primary d-grid col-6 mx-auto" type="submit"
-                    style="margin-top: 10px; margin-bottom: 10px; padding: 0px 30px;">Send</button>
+                <button class="btn btn-primary d-grid col-6 mx-auto text-center" type="submit"
+                    style="margin-top: 10px; margin-bottom: 10px; padding: 0px 30px; text-align: center">Send</button>
             </div>
         </form>
       </div>

@@ -136,3 +136,28 @@ footer a {
 .calendar {
     background-color: #ffffff;
 }
+
+/*Personal trainer */
+
+.submit-pt {
+    margin-top: 20px;
+}
+
+/* Google maps */
+
+.google-map {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+/* Media Queries */

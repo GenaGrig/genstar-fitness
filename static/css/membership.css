@@ -48,3 +48,19 @@
     width: 100%;
     height: 300px;
 }
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    .card {
+        --bs-gutter-y: 0rem;
+        align-items: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+}

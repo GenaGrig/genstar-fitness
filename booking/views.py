@@ -62,7 +62,7 @@ def bookingSubmit(request):
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
+    deltatime = today + timedelta(days=30)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
 
@@ -121,9 +121,9 @@ def userUpdate(request, id):
     minDate = today.strftime('%Y-%m-%d')
 
     #24h if statement in template:
-    delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=1)).strftime('%Y-%m-%d')
-    #Calling 'validWeekday' Function to Loop days you want in the next 21 days:
-    weekdays = validWeekday(22)
+    delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=30)).strftime('%Y-%m-%d')
+    #Calling 'validWeekday' Function to Loop days you want in the next 30 days:
+    weekdays = validWeekday(30)
 
     #Only show the days that are not full:
     validateWeekdays = isWeekdayValid(weekdays)
@@ -157,7 +157,7 @@ def userUpdateSubmit(request, id):
     ]
     today = datetime.now()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
+    deltatime = today + timedelta(days=30)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
 
@@ -206,10 +206,10 @@ def userUpdateSubmit(request, id):
 def staffPanel(request):
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
-    deltatime = today + timedelta(days=21)
+    deltatime = today + timedelta(days=30)
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
-    #Only show the Appointments 21 days from today
+    #Only show the Appointments 30 days from today
     items = Appointment.objects.filter(day__range=[minDate, maxDate]).order_by('day', 'time')
 
     return render(request, 'staffPanel.html', {

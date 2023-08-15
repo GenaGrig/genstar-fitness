@@ -132,6 +132,9 @@ def userUpdate(request, id):
     if request.method == 'POST':
         workout = request.POST.get('workout')
         day = request.POST.get('day')
+        if workout == None:
+            messages.success(request, "Please Select A Workout!")
+            return redirect('userUpdate', id=id)
 
         #Store day and service in django session:
         request.session['day'] = day
@@ -159,7 +162,7 @@ def userUpdateSubmit(request, id):
     maxDate = strdeltatime
 
     day = request.session.get('day')
-    service = request.session.get('workout')
+    workout = request.session.get('workout')
     
     #Only show the time of the day that has not been selected before and the time he is editing:
     hour = checkEditTime(times, day, id)
@@ -174,7 +177,7 @@ def userUpdateSubmit(request, id):
                 if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday' or date == 'Saturday' or date == 'Sunday':
                     if Appointment.objects.filter(day=day).count() < 30:
                         if Appointment.objects.filter(day=day, time=time).count() < 30 or userSelectedTime == time:
-                            AppointmentForm = Appointment.objects.filter(pk=id).update(
+                            appointment = Appointment.objects.filter(pk=id).update(
                                 user = user,
                                 workout = workout,
                                 day = day,

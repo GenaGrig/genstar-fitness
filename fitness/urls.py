@@ -10,4 +10,6 @@ urlpatterns = [
     path('contact/', views.ContactView.as_view(), name='contact'),
     path('booking/', views.BookingView.as_view(), name='booking'),
     path('register/', views.register_user, name='register'),
+    path('terms-and-conditions/', views.TermsAndConditionsView.as_view(), name='terms-and-conditions'),
+    path('privacy-policy/', views.PrivacyPolicyView.as_view(), name='privacy-policy'),
 ]

@@ -58,11 +58,11 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Terms and conditions
+              Terms of Use
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Terms and Conditions</a></li>
-              <li><a class="dropdown-item" href="#">Privacy Policy/GDPR</a></li>
+              <li><a class="dropdown-item" href="{% url 'terms-and-conditions' %}">Terms and Conditions</a></li>
+              <li><a class="dropdown-item" href="{% url 'privacy-policy' %}">Privacy Policy/GDPR</a></li>
             </ul>
           </li>
           {% if user.is_authenticated %}

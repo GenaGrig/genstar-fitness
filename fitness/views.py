@@ -119,3 +119,21 @@ def register_user(request):
     else:
         form = SignUpForm()
     return render(request, 'register.html', {'form': form})
+
+
+class TermsAndConditionsView(generic.TemplateView):
+    template_name = 'terms-and-conditions.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Terms and Conditions'
+        return context
+
+
+class PrivacyPolicyView(generic.TemplateView):
+    template_name = 'privacy-policy.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Privacy Policy'
+        return context

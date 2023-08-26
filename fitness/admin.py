@@ -7,6 +7,3 @@ admin.site.register(RegisteredUser)
 admin.site.register(Trainer)
 
 admin.site.register(Workout)
-
-
-

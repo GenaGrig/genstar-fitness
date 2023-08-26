@@ -1,10 +1,8 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from django.views import generic
 from django.core.mail import send_mail
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login
 from .forms import SignUpForm
-from django.contrib.auth.models import User
-from django import forms
 from django.contrib import messages
 
 
@@ -42,42 +40,23 @@ class PersonalTrainerView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'personal_trainer'
         return context
-    
-    
+
+
 class ContactView(generic.TemplateView):
     template_name = 'contact.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Contact'
         return context
-    
 
-# def contact(request):
-#     if request.method == 'POST':
-#         message_name = request.POST['message-name']
-#         message_email = request.POST['message-email']
-#         message = request.POST['message']
-        
-#         # Send an email
-#         send_mail(
-#             message_name,  # subject
-#             message,  # message
-#             message_email,  # from email
-#             ['genstarproject@gmail.com'],  # to email
-#             fail_silently=False,
-#         )
-    
-#         return render(request, 'contact.html', {'message_name': message_name})
-#     else:
-#         return render(request, 'contact.html', {})
 
 def contact(request):
     if request.method == 'POST':
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
         message = request.POST['message']
-        
+
         # Send an email
         send_mail(
             message_name,  # subject
@@ -86,12 +65,12 @@ def contact(request):
             ['genstarproject@gmail.com'],  # to email
             fail_silently=False,
         )
-    
+
         return render(request, 'contact.html', {'message_name': message_name})
     else:
         return render(request, 'contact.html', {})
-    
-    
+
+
 class BookingView(generic.TemplateView):
     template_name = 'index.html'
 
@@ -123,7 +102,7 @@ def register_user(request):
 
 class TermsAndConditionsView(generic.TemplateView):
     template_name = 'terms-and-conditions.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Terms and Conditions'
@@ -132,7 +111,7 @@ class TermsAndConditionsView(generic.TemplateView):
 
 class PrivacyPolicyView(generic.TemplateView):
     template_name = 'privacy-policy.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Privacy Policy'

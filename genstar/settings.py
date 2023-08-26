@@ -21,7 +21,7 @@ if os.path.isfile('env.py'):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR=os.path.join(BASE_DIR, 'templates')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,11 +40,12 @@ ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com',
                  '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu103.gitpod.io',
                  ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu102.gitpod.io',
-                        'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu103.gitpod.io',
-                        'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
-                        'http://localhost:8000/',
-                        'http://127.0.0.1/',
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu102.gitpod.io',
+    'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu103.gitpod.io',
+    'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
+    'http://localhost:8000/',
+    'http://127.0.0.1/',
                         ]
 
 

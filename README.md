@@ -1,3 +1,8 @@
+
+
+
+
+
 https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists - fix problem with update user profile, username already exist
 https://www.youtube.com/watch?v=F5kTZdi_c5k - update user profiles
 https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1 - register users

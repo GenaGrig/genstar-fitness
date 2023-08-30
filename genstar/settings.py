@@ -34,15 +34,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com',
-                 'localhost',
-                 '127.0.0.1',
-                 '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu102.gitpod.io',
-                 '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu103.gitpod.io',
+                 'localhost:8000',
+                 '127.0.0.1:8000',
+                 '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',
                  ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu102.gitpod.io',
-    'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu103.gitpod.io',
+    'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',
     'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
     'http://localhost:8000/',
     'http://127.0.0.1/',

@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect
 from django.views import generic
-from django.core.mail import send_mail
-from django.conf import settings
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm
 from django.contrib import messages
@@ -50,29 +48,6 @@ class ContactView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Contact'
         return context
-
-
-def contact(request):
-    if request.method == 'POST':
-        message_name = request.POST['message-name']
-        message_email = request.POST['message-email']
-        message = request.POST['message']
-
-        # Send an email
-        send_mail(
-            'Message from ' + message_name,  # subject
-            message_name,  # subject
-            message,  # message
-            'settings.EMAIL_HOST_USER',  # from email
-            message_email,  # from email
-            ['genstarproject@gmail.com'],  # to email
-            fail_silently=False,
-        )
-
-        messages.success(request, "Your Message Has Been Sent!")
-        return render(request, 'contact.html', {'message_name': message_name})
-    else:
-        return render(request, 'contact.html', {})
 
 
 class BookingView(generic.TemplateView):

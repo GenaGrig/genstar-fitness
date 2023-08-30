@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import generic
 from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm
 from django.contrib import messages
@@ -59,8 +60,10 @@ def contact(request):
 
         # Send an email
         send_mail(
+            'Message from ' + message_name,  # subject
             message_name,  # subject
             message,  # message
+            'settings.EMAIL_HOST_USER',  # from email
             message_email,  # from email
             ['genstarproject@gmail.com'],  # to email
             fail_silently=False,

@@ -34,17 +34,17 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = "DEVELOPMENT" in os.environ
 
 
-ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com',
+ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
                  'localhost',
                  '127.0.0.1',
                  '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',
                  ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',
-    'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
-    'http://localhost:8000/',
-    'http://127.0.0.1/',
+                'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',
+                'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
+                'http://localhost:8000/',
+                'http://127.0.0.1/',
                         ]
 
 
@@ -193,6 +193,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('EMAIL_ADDRESS')

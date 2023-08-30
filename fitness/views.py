@@ -66,6 +66,7 @@ def contact(request):
             fail_silently=False,
         )
 
+        messages.success(request, "Your Message Has Been Sent!")
         return render(request, 'contact.html', {'message_name': message_name})
     else:
         return render(request, 'contact.html', {})

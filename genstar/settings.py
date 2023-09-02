@@ -35,7 +35,8 @@ DEBUG = True
 # DEBUG = "DEVELOPMENT" in os.environ
 
 
-ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
+ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com',
+                 'genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
                  'localhost',
                  '127.0.0.1',
                  '8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',

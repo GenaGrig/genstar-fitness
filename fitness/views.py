@@ -110,6 +110,7 @@ def contact(request):
             user_message,  # message
             user_email,  # from email
             ['genstarproject@gmail.com'],  # to email
+            fail_silently=False,
         )
 
         return render(request, 'contact.html', {'user_name': user_name})

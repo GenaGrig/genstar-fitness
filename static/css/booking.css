@@ -18,11 +18,11 @@
 
 @media screen and (max-width: 480px) {
     .datepicker td,th {
-        padding: 2px 4px;
-        font-size: 8px;
+        padding: 4px 8px;
+        font-size: 12px;
     }
 
     .m-5 {
-        margin: 1rem;
+        margin: 1rem!important;
     }
 }

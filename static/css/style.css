@@ -169,7 +169,8 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
-    .google-map-div.col {
+    .google-map-div .col {
         margin-right: 0;
+        margin-bottom: 20px;
     }
 }

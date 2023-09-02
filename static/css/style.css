@@ -167,3 +167,9 @@ footer a {
         min-height: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .google-map-div.col {
+        margin-right: 0;
+    }
+}

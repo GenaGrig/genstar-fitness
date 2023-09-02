@@ -44,6 +44,7 @@ ALLOWED_HOSTS = ['genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com',
 CSRF_TRUSTED_ORIGINS = [
                 'https://8000-genagrig-genstarfitness-x9jcaj9ejj1.ws-eu104.gitpod.io',
                 'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/',
+                'https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com',
                 'http://localhost:8000/',
                 'http://127.0.0.1/',
                         ]

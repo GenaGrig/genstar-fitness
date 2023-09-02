@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib.auth import authenticate, login
 from .forms import SignUpForm
 from django.contrib import messages
+from django.core.mail import send_mail
 
 
 class MainPageView(generic.TemplateView):
@@ -95,3 +96,23 @@ class PrivacyPolicyView(generic.TemplateView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Privacy Policy'
         return context
+
+
+def contact(request):
+    if request.method == 'POST':
+        user_name = request.POST['user-name']
+        user_email = request.POST['user-email']
+        user_message = request.POST['user-message']
+
+        # send an email
+        send_mail(
+            'Genstar Fitness contact from' + user_name,  # subject
+            user_message,  # message
+            user_email,  # from email
+            ['genstarproject@gmail.com'],  # to email
+        )
+
+        return render(request, 'contact.html', {'user_name': user_name})
+
+    else:
+        return render(request, 'contact.html', {})

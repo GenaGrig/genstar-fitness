@@ -18,19 +18,19 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
         3. [Strategy Table](#strategy-table)
     2. [Scope](#scope)
     3. [Structure](#structure)
-    4. [Skeleton](#skeleton)
-    5. [Surface](#surface)
+    4. [Surface](#surface)
 2. [Features](#features)
-    1. [General](#general)
+    1. [Main features](#main-features)
     2. [Home Page](#home-page)
     3. [Membership Page](#membership-page)
     4. [Workouts Page](#workouts-page)
     5. [PT Page](#personal-trainer-page)
     6. [Terms of Use Page](#terms-of-use-page)
     7. [Profile Page](#profile-page)
-    8. [Booking Pages](#booking-pages)
-    9. [Staff Panel Page](#delete-reply-page)
-    10. [Authentication Pages](#authentication-pages)
+    8. [Edit Profile Page](#edit-profile-page)
+    9. [Booking Pages](#booking-pages)
+    10. [Staff Panel Page](#delete-reply-page)
+    11. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -108,7 +108,33 @@ Based on stategy table, not all the features will be implemented in the first de
 
 ![Structure of the Genstar Fitness website](/media/screenshots/genstar-fitness-structure.png)
 
-https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists - fix problem with update user profile, username already exist
-https://www.youtube.com/watch?v=F5kTZdi_c5k - update user profiles
-https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1 - register users
-https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78 - booking system tutorial
+### Surface
+
+#### Color palette
+
+Color scheme of blue(#0126fa) for navigation bar background, light blue(#47a9ff) for footer and some container page elements background and white(#ffffff) for text color on a blue or light blue background. These colors are used througout the website and create together mild color palette for user eyes to make the UI and UX smoother.
+
+![Screenshot of color palette for website](/media/screenshots/color-palette.PNG)
+
+#### Fonts
+
+No extra fonts we used on this website. All fonts are default by Bootstrap. There is no difficulties to read the text written used by this fonts.
+
+# Features
+
+### Main features
+
+
+
+
+
+
+
+
+
+
+# Credits
+* [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
+* [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
+* [New register user form tutorial](https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1)
+* [Booking system tutorial](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)

@@ -3,8 +3,7 @@
 {% load static %}
 {% block body %}
 
-
-
+<!--  This is the user update page where the user can update their booking information, workout and date selection -->
 
 {% if user.is_authenticated %}
 <h1 class="text-center  mt-3">Edit Booking</h1>
@@ -24,7 +23,7 @@
                 <option value="BODYSTEP">BODYSTEP</option>
             </select>
         </div>
-
+        <!--input date-->
             <div class="mt-3">
                 <h3 class="">Select Date:</h3>
                 <input type="text" class="form-select fs-3 calendar" data-provide="datepicker-inline" data-date-format="yyyy-mm-dd" data-date-today-highlight="true" 

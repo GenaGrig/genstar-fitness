@@ -2,6 +2,7 @@ from django.db import models
 
 
 class RegisteredUser(models.Model):
+    '''Registered user model'''
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email_address = models.CharField(max_length=100)
@@ -16,6 +17,7 @@ class RegisteredUser(models.Model):
 
 
 class Trainer(models.Model):
+    '''Trainers model'''
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email_address = models.CharField(max_length=100)
@@ -31,6 +33,7 @@ class Trainer(models.Model):
 
 
 class Workout(models.Model):
+    '''Workout model'''
     workout_name = models.CharField(max_length=100)
     workout_description = models.CharField(max_length=100)
     workout_video = models.CharField(max_length=100, null=True, blank=True)
@@ -40,6 +43,7 @@ class Workout(models.Model):
 
 
 class WorkoutPlan(models.Model):
+    '''Workout plan model'''
     workout_plan_name = models.CharField(max_length=100)
     workout_plan_description = models.CharField(max_length=100)
     workout_plan_video = models.CharField(max_length=100, null=True, blank=True)
@@ -49,6 +53,7 @@ class WorkoutPlan(models.Model):
 
 
 class WorkoutTrainer(models.Model):
+    '''Workout trainer models'''
     workout = models.ForeignKey(Workout, on_delete=models.CASCADE)
     trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
 

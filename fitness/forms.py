@@ -5,9 +5,8 @@ from django.contrib.auth.models import User
 
 
 class SignUpForm(UserCreationForm):
+    '''Sign up form for new users to register as clients or trainers'''
     email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email Address'}), required=True)
-    # first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}), required=True)
-    # last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}), required=True)
 
     class Meta:
         model = User
@@ -20,16 +19,6 @@ class SignUpForm(UserCreationForm):
         self.fields['username'].widget.attrs['placeholder'] = 'Username'
         self.fields['username'].label = ''
         self.fields['username'].help_text = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
-
-        # self.fields['first_name'].widget.attrs['class'] = 'form-control'
-        # self.fields['first_name'].widget.attrs['placeholder'] = 'First Name'
-        # self.fields['first_name'].label = ''
-        # self.fields['first_name'].help_text = '<span class="form-text text-muted"><small>Required.</small></span>'
-
-        # self.fields['last_name'].widget.attrs['class'] = 'form-control'
-        # self.fields['last_name'].widget.attrs['placeholder'] = 'Last Name'
-        # self.fields['last_name'].label = ''
-        # self.fields['last_name'].help_text = '<span class="form-text text-muted"><small>Required.</small></span>'
 
         self.fields['email'].widget.attrs['class'] = 'form-control'
         self.fields['email'].widget.attrs['placeholder'] = 'Email Address'
@@ -48,8 +37,6 @@ class SignUpForm(UserCreationForm):
 
     def save(self, commit=True):
         user = super(SignUpForm, self).save(commit=False)
-        # user.first_name = self.cleaned_data['first_name']
-        # user.last_name = self.cleaned_data['last_name']
         user.email = self.cleaned_data['email']
 
         if commit:

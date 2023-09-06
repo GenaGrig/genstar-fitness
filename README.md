@@ -120,6 +120,8 @@ Color scheme of blue(#0126fa) for navigation bar background, light blue(#47a9ff)
 
 No extra fonts we used on this website. All fonts are default by Bootstrap. There is no difficulties to read the text written used by this fonts.
 
+[Back to top ⇧](#genstar-fitness)
+
 # Features
 
 ### Main features
@@ -158,14 +160,90 @@ Flash messages is a very helpful and good for UX tool that flashes when user mak
 ![Screenshot of flash message after account creation](/media/screenshots/flash-message-new-account.PNG)
 ![Screenshot of flash message after new booking](/media/screenshots/flash-message-booking.PNG)
 
+### Main page
 
 
 
 
+[Back to top ⇧](#genstar-fitness)
+
+# Technologies used
+
+### Languages Used
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 
+### Libraries and Frameworks
+
+* [Django](https://www.djangoproject.com/)   
+    * Django was used as web framework.
+
+* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)  
+    * Bootstrap 5 was used throughout the website to help with styling and responsiveness.
+
+* [Font Awesome](https://fontawesome.com)  
+    * Font Awesome was used throughout the website to add icons for aesthetic and UX purposes. 
+
+
+### Packages / Dependecies Installed
+
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
+    * Django Allauth was used for user authentication, registration, and account management.
+
+* [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/)   
+    * Django Crispy Form was used to control the rendering of the forms. 
+ 
+* [Gunicorn](https://gunicorn.org/)  
+    * Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
+
+* [Cloudinary](https://cloudinary.com/)
+    * Cloudinary has been used as image management solution
+
+### Database Management
+* [ElephantSQL](https://www.elephantsql.com/)   
+    * ElephantSQL database was used in production, as a service based on PostgreSQL.
+
+
+### Tools and Programs
+
+* [Git](https://git-scm.com)  
+    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub. 
+
+* [GitPod](https://gitpod.io/)
+     * GitPod was used for writing code, committing, and then pushing to GitHub.
+
+* [GitHub](https://github.com)  
+   GitHub was used to store the projects code after being pushed from Git. 
+
+* [Heroku](https://www.heroku.com)   
+    * Heroku was used to deploy the website.
+
+* [Am I Responsive](ami.responsivedesign.is)  
+    * Am I Responsive was used to preview the website across a variety of popular devices.
+
+* [Coolors](https://coolors.co)  
+    * Coolors was used to create a color scheme for the website.
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+    * Chrome DevTools was used during development process for code review and to test responsiveness.
+
+* [W3C Markup Validator](https://validator.w3.org/)
+    * W3C Markup Validator was used to validate the HTML code.
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    * W3C CSS Validator was used to validate the CSS code.
+
+* [JSHint](https://jshint.com/) 
+    * The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
+
+[Back to top ⇧](#genstar-fitness)
 
 # Credits
+* [josswe26 README.md as a good example how the readme should look like](https://github.com/josswe26/code-buddy)
 * [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
 * [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
 * [New register user form tutorial](https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1)

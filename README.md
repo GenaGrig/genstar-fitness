@@ -29,7 +29,7 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
     7. [Profile Page](#profile-page)
     8. [Edit Profile Page](#edit-profile-page)
     9. [Booking Pages](#booking-pages)
-    10. [Staff Panel Page](#delete-reply-page)
+    10. [Staff Panel Page](#staff-panel-page)
     11. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
@@ -124,7 +124,39 @@ No extra fonts we used on this website. All fonts are default by Bootstrap. Ther
 
 ### Main features
 
+The website is made using the responsive design in mind, as not only desktop PC or laptop users will be visiting it. Website runs smoothly on tablettes and phones as well and supports differents screen sizes.
 
+There are several main website elements that are presented on each page.
+
+#### Navigation bar
+* Main navigation bar
+![Screenshot of main navigation bar](/media/screenshots/navigation-bar-main.PNG)
+
+Main navigation bar contains all the neccessary buttons for user to get all the information about fitness club services, pricing and contacts. 
+
+* User logged in navigation bar
+![Screenshot of navigation bar when user logged in](/media/screenshots/navigation-bar-logged-in.PNG)
+
+When user is authenticated, on main navigation bar adds three new buttons such as "Book Workout" - as direct link to booking service, "My Profile" - page where user can see all his bookings, edit or delete them; edit profile; make new bookings and "Logout" to logout from account.
+
+* Navigation bar on user profile / booking page
+![Screenshot of navigation bar on user profile/booking page](/media/screenshots/navigation-bar-booking.PNG)
+
+This is navigation bar which is shown when user clicks on "Book Workout" or "My Profile" buttons after user gets authenticated. On this navbar you can see "Staff Panel" button, which is only available to users which have roles as admins or staff members. This button opens a page where staff members or admins can see all the bookings made by users, filter them or delete. More about this button you can find in [THIS](#staff-panel-page) section.
+
+#### Footer
+
+Footer contains information about:
+- fitness club opening hours, reception opening hours (when the personal of the club are available on site)
+- contact information such as address, phone and email
+- social network links, such as Twitter, Instagram and Facebook
+
+#### Flash messages
+
+Flash messages is a very helpful and good for UX tool that flashes when user make some active action such as creating new account or making a new booking. Some other functions when message pops up are - edit profile, edit or delete booking, login and logout.
+
+![Screenshot of flash message after account creation](/media/screenshots/flash-message-new-account.PNG)
+![Screenshot of flash message after new booking](/media/screenshots/flash-message-booking.PNG)
 
 
 

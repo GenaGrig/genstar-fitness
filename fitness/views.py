@@ -11,7 +11,6 @@ class MainPageView(generic.TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
-        '''Get context data for main page view'''
         context = super().get_context_data(**kwargs)
         context['title'] = 'Genstar'
         return context

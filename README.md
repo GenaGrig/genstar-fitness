@@ -244,7 +244,7 @@ Flash messages is a very helpful and good for UX tool that flashes when user mak
 [Back to top ⇧](#genstar-fitness)
 
 # Credits
-* [josswe26 README.md as a good example how the readme should look like](https://github.com/josswe26/code-buddy)
+* [josswe26 README.md as a perfect example how the readme should look like](https://github.com/josswe26/code-buddy)
 * [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
 * [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
 * [New register user form tutorial](https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1)

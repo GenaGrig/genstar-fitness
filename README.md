@@ -162,8 +162,51 @@ Flash messages is a very helpful and good for UX tool that flashes when user mak
 
 [Back to top ⇧](#genstar-fitness)
 
+### Main page
+![Screenshot of main page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.PNG) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile.jpg) |
+### Membership page
+![Screenshot of membership page]()
 
-## Technologies Used
+### Workouts page
+![Screenshot of workouts page]()
+
+### PT page (Personal Trainer)
+![Screenshot of personal trainer page]()
+
+### Contact Us page
+![Screenshot of contact us page]()
+
+### Terms of Use pages
+
+
+#### Terms and Conditions
+![Screenshot of terms and coditions page]()
+
+#### Privacy Policy/GDPR
+![Screenshot of privacy policy page]()
+
+### Profile page
+![Screenshot of user profile page]()
+
+### Edit profile page
+![Screenshot of edit profile form]()
+
+### Booking pages
+![Screenshot of booking workout and date page]()
+![Screenshot of booking time selection page]()
+
+### Staff panel page
+![Screenshot of staff panel page]()
+
+### Authenticationg pages
+![Screenshot of register new account page]()
+![Screenshot of sign in page]()
+![Screenshot of logout page]()
+
+# Technologies Used
 
 ### Languages Used
 

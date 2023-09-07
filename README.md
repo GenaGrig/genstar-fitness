@@ -166,7 +166,7 @@ Flash messages is a very helpful and good for UX tool that flashes when user mak
 ![Screenshot of main page]()
 Desktop | Mobile |
 --- | --- |
-![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.PNG) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile.jpg) |
+![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
 ### Membership page
 ![Screenshot of membership page]()
 

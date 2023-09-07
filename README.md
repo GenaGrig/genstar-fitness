@@ -163,48 +163,78 @@ Flash messages is a very helpful and good for UX tool that flashes when user mak
 [Back to top ⇧](#genstar-fitness)
 
 ### Main page
-![Screenshot of main page]()
 Desktop | Mobile |
 --- | --- |
 ![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
 ### Membership page
-![Screenshot of membership page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Membership Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
 
 ### Workouts page
-![Screenshot of workouts page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Workouts Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Workouts Page image ](/media/screenshots/mobile/workouts-page-mobile-res.jpg) |
 
 ### PT page (Personal Trainer)
-![Screenshot of personal trainer page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Personal Trainer Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Personal Trainer Page image ](/media/screenshots/mobile/personal-trainer-page-mobile-res.jpg) |
 
 ### Contact Us page
-![Screenshot of contact us page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Contact Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Contact Page image ](/media/screenshots/mobile/contact-page-mobile-res.jpg) |
 
 ### Terms of Use pages
 
 
 #### Terms and Conditions
-![Screenshot of terms and coditions page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Terms and Conditions Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Terms and Conditions Page image ](/media/screenshots/mobile/terms-and-conditions-mobile-res.jpg) |
 
 #### Privacy Policy/GDPR
-![Screenshot of privacy policy page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Privacy Policy Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Privacy Policy Page image ](/media/screenshots/mobile/privacy-policy-mobile-res.jpg) |
 
 ### Profile page
-![Screenshot of user profile page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop User Profile Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-mobile-res.jpg) |
 
 ### Edit profile page
-![Screenshot of edit profile form]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Edit Profile Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Edit Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
 
 ### Booking pages
-![Screenshot of booking workout and date page]()
-![Screenshot of booking time selection page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Booking Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Booking Page image ](/media/screenshots/mobile/booking-page-mobile-res.jpg) |
+
+Desktop | Mobile |
+--- | --- |
+![Desktop Booking Time Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Booking Time Page image ](/media/screenshots/mobile/booking-time-select-mobile-res.jpg) |
 
 ### Staff panel page
-![Screenshot of staff panel page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Staff Panel Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-mobile-res.jpg) |
 
 ### Authenticationg pages
-![Screenshot of register new account page]()
-![Screenshot of sign in page]()
-![Screenshot of logout page]()
+Desktop | Mobile |
+--- | --- |
+![Desktop Register Account image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-accont-mobile-res.jpg) |
+
+Desktop | Mobile |
+--- | --- |
+![Desktop Sign In Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
+
+Desktop | Mobile |
+--- | --- |
+![Desktop Sign Out Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-page-mobile-res.jpg) |
 
 # Technologies Used
 

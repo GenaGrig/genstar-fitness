@@ -160,31 +160,38 @@ Flash messages is a very helpful and good for UX tool that flashes when user mak
 ![Screenshot of flash message after account creation](/media/screenshots/flash-message-new-account.PNG)
 ![Screenshot of flash message after new booking](/media/screenshots/flash-message-booking.PNG)
 
+### Mobile menu
+Menu main | Menu auth | Menu profile |
+--- | --- | --- |
+![Desktop Home Page image](/media/screenshots/mobile/main-menu-mobile-res.jpg) | ![Mobile Home Page image ](/media/screenshots/mobile/main-menu-auth-mobile-res.jpg) | ![Mobile Home Page image ](/media/screenshots/mobile/profile-page-menu-mobile-res.jpg)
+
+
 [Back to top ⇧](#genstar-fitness)
 
 ### Main page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
+
 ### Membership page
 Desktop | Mobile |
 --- | --- |
-![Desktop Membership Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
+![Desktop Membership Page image](/media/screenshots/desktop/membership-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
 
 ### Workouts page
 Desktop | Mobile |
 --- | --- |
-![Desktop Workouts Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Workouts Page image ](/media/screenshots/mobile/workouts-page-mobile-res.jpg) |
+![Desktop Workouts Page image](/media/screenshots/desktop/workouts-page-desktop.png) | ![Mobile Workouts Page image ](/media/screenshots/mobile/workouts-page-mobile-res.jpg) |
 
 ### PT page (Personal Trainer)
 Desktop | Mobile |
 --- | --- |
-![Desktop Personal Trainer Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Personal Trainer Page image ](/media/screenshots/mobile/personal-trainer-page-mobile-res.jpg) |
+![Desktop Personal Trainer Page image](/media/screenshots/desktop/personal-trainer-page-desktop.png) | ![Mobile Personal Trainer Page image ](/media/screenshots/mobile/personal-trainer-page-mobile-res.jpg) |
 
 ### Contact Us page
 Desktop | Mobile |
 --- | --- |
-![Desktop Contact Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Contact Page image ](/media/screenshots/mobile/contact-page-mobile-res.jpg) |
+![Desktop Contact Page image](/media/screenshots/desktop/contact-page-desktop.PNG) | ![Mobile Contact Page image ](/media/screenshots/mobile/contact-page-mobile-res.jpg) |
 
 ### Terms of Use pages
 
@@ -192,49 +199,55 @@ Desktop | Mobile |
 #### Terms and Conditions
 Desktop | Mobile |
 --- | --- |
-![Desktop Terms and Conditions Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Terms and Conditions Page image ](/media/screenshots/mobile/terms-and-conditions-mobile-res.jpg) |
+![Desktop Terms and Conditions Page image](/media/screenshots/desktop/terms-and-conditions-desktop.png) | ![Mobile Terms and Conditions Page image ](/media/screenshots/mobile/terms-and-conditions-mobile-res.jpg) |
 
 #### Privacy Policy/GDPR
 Desktop | Mobile |
 --- | --- |
-![Desktop Privacy Policy Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Privacy Policy Page image ](/media/screenshots/mobile/privacy-policy-mobile-res.jpg) |
+![Desktop Privacy Policy Page image](/media/screenshots/desktop/private-policy-desktop.png) | ![Mobile Privacy Policy Page image ](/media/screenshots/mobile/privacy-policy-mobile-res.jpg) |
 
 ### Profile page
 Desktop | Mobile |
 --- | --- |
-![Desktop User Profile Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-mobile-res.jpg) |
+![Desktop User Profile Page image](/media/screenshots/desktop/user-profile-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-mobile-res.jpg) |
+
+#### Delete Workout Confirmation Modal
+
+Desktop | Mobile |
+--- | --- |
+![Desktop Delete Booking Confirmation Modal image](/media/screenshots/desktop/confirm-delete-modal-desktop.PNG) | ![Mobile Delete Booking Confirmation Modal image ](/media/screenshots/mobile/delete-booking-confirmation-mobile-res.jpg) |
 
 ### Edit profile page
 Desktop | Mobile |
 --- | --- |
-![Desktop Edit Profile Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Edit Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
+![Desktop Edit Profile Page image](/media/screenshots/desktop/update-profile-form-desktop.PNG) | ![Mobile Edit Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
 
 ### Booking pages
 Desktop | Mobile |
 --- | --- |
-![Desktop Booking Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Booking Page image ](/media/screenshots/mobile/booking-page-mobile-res.jpg) |
+![Desktop Booking Page image](/media/screenshots/desktop/booking-page-desktop.PNG) | ![Mobile Booking Page image ](/media/screenshots/mobile/booking-page-mobile-res.jpg) |
 
 Desktop | Mobile |
 --- | --- |
-![Desktop Booking Time Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Booking Time Page image ](/media/screenshots/mobile/booking-time-select-mobile-res.jpg) |
+![Desktop Booking Time Page image](/media/screenshots/desktop/booking-time-page-desktop.PNG) | ![Mobile Booking Time Page image ](/media/screenshots/mobile/booking-time-select-mobile-res.jpg) |
 
 ### Staff panel page
 Desktop | Mobile |
 --- | --- |
-![Desktop Staff Panel Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-mobile-res.jpg) |
+![Desktop Staff Panel Page image](/media/screenshots/desktop/staff-panel-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-mobile-res.jpg) |
 
 ### Authenticationg pages
 Desktop | Mobile |
 --- | --- |
-![Desktop Register Account image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-accont-mobile-res.jpg) |
+![Desktop Register Account image](/media/screenshots/desktop/register-account-page-desktop.PNG) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-accont-mobile-res.jpg) |
 
 Desktop | Mobile |
 --- | --- |
-![Desktop Sign In Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
+![Desktop Sign In Page image](/media/screenshots/desktop/sign-ip-desktop.PNG) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
 
 Desktop | Mobile |
 --- | --- |
-![Desktop Sign Out Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-page-mobile-res.jpg) |
+![Desktop Sign Out Page image](/media/screenshots/desktop/sign-out-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-page-mobile-res.jpg) |
 
 # Technologies Used
 

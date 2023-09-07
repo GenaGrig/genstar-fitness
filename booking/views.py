@@ -7,7 +7,6 @@ from django.contrib.auth.models import User
 
 
 def workout_view(request):
-    '''Workouts page view'''
     context = {
         'all_workouts': Appointment.objects.filter(foo='bar').order_by('workout').all
         }
@@ -15,7 +14,6 @@ def workout_view(request):
 
 
 def index(request):
-    '''Index page view'''
     return render(request, "index.html", {})
 
 
@@ -46,7 +44,6 @@ def booking(request):
 
 
 def bookingSubmit(request):
-    '''Submit a booking to the database'''
     user = request.user
     times = [
         "10:00",
@@ -107,7 +104,6 @@ def bookingSubmit(request):
 
 
 def userPanel(request):
-    '''User panel page view'''
     user = request.user
     appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
     return render(request, 'userPanel.html', {
@@ -117,7 +113,6 @@ def userPanel(request):
 
 
 def userUpdate(request, id):
-    '''Update a booking in the database'''
     appointment = Appointment.objects.get(pk=id)
     userdatepicked = appointment.day
     # Copy  booking:
@@ -154,7 +149,6 @@ def userUpdate(request, id):
 
 
 def userUpdateSubmit(request, id):
-    '''Submit an updated booking to the database'''
     user = request.user
     times = [
         "10:00",
@@ -219,7 +213,6 @@ def userUpdateSubmit(request, id):
 
 
 def staffPanel(request):
-    '''Staff panel page view'''
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
     deltatime = today + timedelta(days=30)
@@ -234,7 +227,6 @@ def staffPanel(request):
 
 
 def dayToWeekday(x):
-    '''Convert day to weekday'''
     z = datetime.strptime(x, "%Y-%m-%d")
     y = z.strftime('%A')
     return y
@@ -253,7 +245,6 @@ def validWeekday(days):
 
 
 def isWeekdayValid(x):
-    '''Only show the days that are not full'''
     validateWeekdays = []
     for j in x:
         if Appointment.objects.filter(day=j).count() < 30:
@@ -262,7 +253,6 @@ def isWeekdayValid(x):
 
 
 def checkTime(times, day):
-    '''Only show the time of the day that has not been selected before'''
     # Only show the time of the day that has not been selected before:
     x = []
     for k in times:
@@ -291,7 +281,6 @@ def delete_booking(request, id):
 
 
 def delete_booking_staff(request, id):
-    '''Delete a booking from the database from staff panel'''
     appointment = Appointment.objects.get(pk=id)
     appointment.delete()
     messages.success(request, "Booking Deleted!")
@@ -299,7 +288,6 @@ def delete_booking_staff(request, id):
 
 
 def is_booking_allowed(workout_type, date, time_slot):
-    '''Check if a booking is allowed'''
     # Count existing bookings for the given workout type, date, and time slot
     existing_bookings_count = Appointment.objects.filter(
         workout_type=workout_type,
@@ -318,7 +306,6 @@ def is_booking_allowed(workout_type, date, time_slot):
 
 
 def update_profile(request):
-    '''Update a user profile'''
     if request.user.is_authenticated:
         current_user = User.objects.get(id=request.user.id)
         form = MyUserChangeForm(request.POST or None, request.FILES or None, instance=current_user)

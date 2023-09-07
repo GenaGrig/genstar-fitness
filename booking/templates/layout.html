@@ -29,8 +29,7 @@
 </head>
 
 <body>
-<!-- This is the layout.html file
-     This is the navigation bar that is included in all pages -->
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand mt-2" href="{% url 'index' %}">GenStar Fitness <i class="fa-solid fa-person-walking fa-flip mt-2" style="color: #ffffff;"></i></a>
@@ -96,7 +95,7 @@
 
   {% block body %}
   {% endblock %}
-<!-- This is the footer that is included in all pages -->
+
   <footer class="footer mt-auto py-3 text-center">
     <div class="container">
       <div class="row" style="margin: 0px;">
@@ -144,7 +143,6 @@
     </div>
   </footer>
 
-  <!-- This is the script that closes the messages after 3 seconds -->
   <script>
     setTimeout(function () {
       let messages = document.getElementById('msg');

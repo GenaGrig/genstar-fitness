@@ -2,7 +2,6 @@ from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
 
-'''Booking workout model'''
 SERVICE_CHOICES = (
     ("BODYATTACK", "BODYATTACK"),
     ("BODYBALANCE", "BODYBALANCE"),
@@ -11,7 +10,6 @@ SERVICE_CHOICES = (
     ("BODYSTEP", "BODYSTEP"),
     )
 
-'''Booking time model'''
 TIME_CHOICES = (
     ("10:00", "10:00"),
     ("11:00", "11:00"),
@@ -28,7 +26,6 @@ TIME_CHOICES = (
 
 
 class Appointment(models.Model):
-    '''Appointment model'''
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     workout = models.CharField(max_length=50, choices=SERVICE_CHOICES, default="BODYATTACK")
     day = models.DateField(default=datetime.now)
@@ -40,7 +37,6 @@ class Appointment(models.Model):
 
 
 class BookingSlots(models.Model):
-    '''Booking slots model'''
     WORKOUT_CHOICES = [
         ("BODYATTACK", "BODYATTACK"),
         ("BODYBALANCE", "BODYBALANCE"),
@@ -59,7 +55,6 @@ class BookingSlots(models.Model):
 
 
 class Membership(models.Model):
-    '''Membership model'''
     MEMBERSHIP_CHOICES = [
         ("Standart", "Standart"),
         ("Student", "Student"),

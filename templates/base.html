@@ -24,8 +24,8 @@
     <title>GenStar Fitness</title>
 </head>
 <body>
-
-<!-- Navigation Bar -->
+    
+{% comment %} Navigation Bar {% endcomment %}
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light">
   <div class="container-fluid">
@@ -92,7 +92,8 @@
   </div>
 </nav>
 
-<!-- Flash Messages -->
+{% comment %} # Flash Messages {% endcomment %}
+
       <div class="col-md-8 offset-md-2">
           {% for message in messages %}
           <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
@@ -102,8 +103,17 @@
           {% endfor %}
       </div>
 
-<!-- Footer -->
-<div class="container">
+<main>
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+{% comment %} # Footer {% endcomment %}
+
+{% comment %} <div class="container">
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -111,7 +121,7 @@
       <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
     </ul>
   </footer>
-</div> 
+</div> {% endcomment %}
 
 <footer class="footer mt-auto py-3">
     <div class="container">
@@ -151,9 +161,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap JS -->
-<!-- Alert Messages -->
 <script>
   setTimeout(function () {
       let messages = document.getElementById('msg');

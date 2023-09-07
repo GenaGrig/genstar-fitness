@@ -81,7 +81,6 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
 * As a Site User I can have all CRUD functionality so that I can create, see, edit and delete my bookings
 
 At the start of the project user stories looked like this:
-
 ![Screenshot of user stories at the start on GitHub](/media/screenshots/user-stories-to-do.PNG)
 
 #### Strategy Table

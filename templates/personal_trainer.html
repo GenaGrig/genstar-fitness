@@ -4,8 +4,6 @@
 
 {% block content %}
 
-<!-- Personal Trainer Page -->
-
 <div class="container-md text-center">
     <div class="d-flex flex-column justify-content-center">
         <h1>Personal Trainer</h1>
@@ -42,8 +40,6 @@
     <h3>Any questions for PT?</h3>
     <h5>Ask anything you like before signing up and booking your first PR session. </h5>
 </div>
-
-<!-- Personal Trainer Contact Form -->
 
 <form action="{% url 'personal_trainer' %}" method="POST">
     {% csrf_token %}

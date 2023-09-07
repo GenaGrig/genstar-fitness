@@ -3,7 +3,6 @@
 {% load static %}
 {% block body %}
 
-<!-- This is the user panel page where the user can view their profile and edit it if needed -->
 
 {% if user.is_authenticated %}
 <h1 class=" ms-5 mt-5 "> Welcome {{ user.username }}! This is your profile!</h1>
@@ -25,7 +24,6 @@
     </div>
 </div>
 
-<!-- This is my bookings table where the user can view their bookings, edit and delete them if needed -->
 
 <div class="shadow p-4 mb-5 mt-1 bg-body bg-body rounded text-black m-5">
     <h1 class="text-center mt-5 mb-5">My bookings:</h1>

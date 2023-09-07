@@ -1,4 +1,3 @@
-/* Datepicker css override */
 .datepicker {
     background-color: rgb(255, 255, 255);
     border: 1px solid #000000;
@@ -10,7 +9,6 @@
     font-size: 20px;
 }
 
-/* Datepicker css override for smaller screens */
 @media screen and (max-width: 768px) {
     .datepicker td,th {
         padding: 8px 12px;

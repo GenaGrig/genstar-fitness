@@ -181,7 +181,9 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Membership Page image](/media/screenshots/desktop/membership-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
 
-Membership page has information about different membership types and which preferences each type gives. There are three types of membership, such as Standart, Student and All Inclusive, each with its own benefits. The button "Buy membership" shold link to checkout page, but for now it is disabled, as payment option is not neccessary in this project. As a future option, membership role will affect booking opportunities, as some membership roles contains exclusive offers. 
+Membership page has information about different membership types and which preferences each type gives. There are three types of membership, such as Standart, Student and All Inclusive, each with its own benefits. The button "Buy membership" shold link to checkout page, but for now it is disabled, as payment option is not neccessary in this project. 
+* As a future option, membership role will affect booking opportunities, as some membership roles contains exclusive offers
+* As a future change, workouts can book only fitness club members (now it can do everyone, who has an active account) or those who have free pass or onetime payment
 
 ### Workouts page
 Desktop | Mobile |
@@ -227,30 +229,51 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop User Profile Page image](/media/screenshots/desktop/user-profile-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-new.jpg) |
 
+User profile page consists of two major parts - User Info and My Bookings.
+* User Info contains infromation about user as first and last name, username and email. There is an Edit Profile button which allows users to change their data. By default first and last name are empty, so user needs to enter them by editing profile. As a future feature more fileds to user profile will be added. 
+
+* My Bookings part allows user to see all reserved bookings and edit or delete them. Here all the CRUD functionality is implemented. User can create a booking, see all bookings made, update bookings and delete them. Edit and delete buttons are shown as icons, because this design is much more comfortable on small screens, such as phones. 
+
 #### Delete Workout Confirmation Modal
 
 Desktop | Mobile |
 --- | --- |
 ![Desktop Delete Booking Confirmation Modal image](/media/screenshots/desktop/confirm-delete-modal-desktop.PNG) | ![Mobile Delete Booking Confirmation Modal image ](/media/screenshots/mobile/delete-booking-confirmation-mobile-res.jpg) |
 
+This is an extended feature for user convenience and to be sure that user will not delete booking accidentally. The same feature is realised on staff panel for the same reason.
+
 ### Edit profile page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Edit Profile Page image](/media/screenshots/desktop/update-profile-form-desktop.PNG) | ![Mobile Edit Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
+
+This page allows user to edit profile and change such information as first and last name (empty by default), username and email. As a future feature change of password and some extra fields can be added.
 
 ### Booking pages
 Desktop | Mobile |
 --- | --- |
 ![Desktop Booking Page image](/media/screenshots/desktop/booking-page-desktop.PNG) | ![Mobile Booking Page image ](/media/screenshots/mobile/booking-page-mobile-res.jpg) |
 
+On this booking page user selects workout type and date in pop-up calender. When done, user need to click on continue to proceed to next page or back to return to user profile page. 
+
 Desktop | Mobile |
 --- | --- |
 ![Desktop Booking Time Page image](/media/screenshots/desktop/booking-time-page-desktop.PNG) | ![Mobile Booking Time Page image ](/media/screenshots/mobile/booking-time-select-mobile-res.jpg) |
+
+On this page user need to select time for chosen workout. When done, user clicks on "Book Workout" to confirm and save booking, or "Back" to go back to previous page and change workout or date.
+
+* This booking section has a lot of improvement possibilities that can be added in the future. For example:
+    * Schedule for each workout with exakt dates and time which repeates every week
+    * Make all booking process on a single page to reduce clicking and pages count
+    * Add workout booking for non-member of fitness club as a free pass or onetime payment (requires payment system and functionality)
 
 ### Staff panel page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Staff Panel Page image](/media/screenshots/desktop/staff-panel-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-new.jpg) |
+
+Staff panel is made only for admins and staff members. On this panel staff members can see all the bookings made by users and filter them by different values. 
+
 
 ### Authentication pages
 Desktop | Mobile |
@@ -270,6 +293,14 @@ Desktop | Mobile |
 ![Desktop Sign Out Page image](/media/screenshots/desktop/sign-out-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-page-mobile-res.jpg) |
 
 Sign Out page is quite simple and contains only one button - "Sign Out". At this stage action can be reverted and user can go back to other pages without signing out. As a feature feature this page can be changed to modal with same functionality.
+
+### Future features
+
+Some features where mentioned directly in page description, but lets summarize them in this section:
+
+* Membership. Membership role will affect booking opportunities, as some membership roles contains exclusive offers
+* Membership. Workouts can be booked only by fitness club members (now it can do everyone, who has an active account) or those who have free pass or onetime payment (requires payment system on a website)
+
 
 # Technologies Used
 

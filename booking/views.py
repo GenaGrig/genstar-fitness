@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 
 def workout_view(request):
+    '''Display all workouts in the database'''
     context = {
         'all_workouts': Appointment.objects.filter(foo='bar').order_by('workout').all
         }
@@ -44,6 +45,7 @@ def booking(request):
 
 
 def bookingSubmit(request):
+    '''Save a booking to the database'''
     user = request.user
     times = [
         "10:00",
@@ -104,6 +106,7 @@ def bookingSubmit(request):
 
 
 def userPanel(request):
+    '''Display all bookings for the current user'''
     user = request.user
     appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
     return render(request, 'userPanel.html', {
@@ -113,6 +116,7 @@ def userPanel(request):
 
 
 def userUpdate(request, id):
+    '''Update a booking in the database'''
     appointment = Appointment.objects.get(pk=id)
     userdatepicked = appointment.day
     # Copy  booking:
@@ -149,6 +153,7 @@ def userUpdate(request, id):
 
 
 def userUpdateSubmit(request, id):
+    '''Save am updated booking to the database'''
     user = request.user
     times = [
         "10:00",
@@ -213,6 +218,7 @@ def userUpdateSubmit(request, id):
 
 
 def staffPanel(request):
+    '''Display all bookings for all users to staff members'''
     today = datetime.today()
     minDate = today.strftime('%Y-%m-%d')
     deltatime = today + timedelta(days=30)
@@ -227,6 +233,7 @@ def staffPanel(request):
 
 
 def dayToWeekday(x):
+    '''Convert a date to a day of the week'''
     z = datetime.strptime(x, "%Y-%m-%d")
     y = z.strftime('%A')
     return y
@@ -245,6 +252,7 @@ def validWeekday(days):
 
 
 def isWeekdayValid(x):
+    '''Only show the days that are not full'''
     validateWeekdays = []
     for j in x:
         if Appointment.objects.filter(day=j).count() < 30:
@@ -273,7 +281,7 @@ def checkEditTime(times, day, id):
 
 
 def delete_booking(request, id):
-    '''Delete a booking from the database'''
+    '''Delete a booking from the database by user'''
     appointment = Appointment.objects.get(pk=id)
     appointment.delete()
     messages.success(request, "Booking Deleted!")
@@ -281,6 +289,7 @@ def delete_booking(request, id):
 
 
 def delete_booking_staff(request, id):
+    '''Delete a booking from the database by staff member'''
     appointment = Appointment.objects.get(pk=id)
     appointment.delete()
     messages.success(request, "Booking Deleted!")
@@ -306,6 +315,7 @@ def is_booking_allowed(workout_type, date, time_slot):
 
 
 def update_profile(request):
+    '''Update a user's profile'''
     if request.user.is_authenticated:
         current_user = User.objects.get(id=request.user.id)
         form = MyUserChangeForm(request.POST or None, request.FILES or None, instance=current_user)

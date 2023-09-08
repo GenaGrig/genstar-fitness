@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 
 class SignUpForm(UserCreationForm):
+    '''Form for the user to register new account'''
     email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email Address'}), required=True)
     first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}), required=True)
     last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}), required=True)
@@ -34,6 +35,7 @@ class SignUpForm(UserCreationForm):
 
 
 class MyUserChangeForm(UserChangeForm):
+    '''Form for the user to edit their account'''
     def __init__(self, *args, **kwargs):
         super(MyUserChangeForm, self).__init__(*args, **kwargs)
         del self.fields['password']

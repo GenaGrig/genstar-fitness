@@ -25,7 +25,7 @@
 
 <div class="shadow p-4 mb-5 mt-1 bg-body bg-body rounded text-black m-5">
     <h1 class="text-center mb-3">My bookings:</h1>
-    <a class="btn btn-primary rounded-3 d-grid col-1 mx-auto" href="{% url 'booking' %}">Book Workout</a>
+    <a class="btn btn-primary rounded-3" href="{% url 'booking' %}">Book Workout</a>
     <hr>
     <div class="table-responsive-md border border-dark">
         <table class="table table-secondary table-bordered border-black table-striped table-hover mx-auto">
@@ -43,9 +43,9 @@
                     <td class="text-center">{{appointment.workout}}</td>
                     <td class="text-center">{{appointment.day}}</td>
                     <td class="text-center">{{appointment.time}}</td>
-                    <td class="text-center">
-                        <a href="{% url 'userUpdate' appointment.id %}"><i class="fa-regular fa-pen-to-square fa-xl" style="color: #3d9900;"></i></a>
-                        <i class="fa-solid fa-trash fa-xl ms-3" style="color: #d10000;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{appointment.id}}"></i>
+                    <td class="text-center edit-delete-btn">
+                        <a href="{% url 'userUpdate' appointment.id %}"><i class="fa-regular fa-pen-to-square fa-xl" style="color: #3d9900; margin: 10px 0;"></i></a>
+                        <i class="fa-solid fa-trash fa-xl fa-stack" style="color: #d10000;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{appointment.id}}"></i>
                     </td>
                 </tr>
                 {% endfor %}

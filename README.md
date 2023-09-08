@@ -225,7 +225,7 @@ Desktop | Mobile |
 ### Profile page
 Desktop | Mobile |
 --- | --- |
-![Desktop User Profile Page image](/media/screenshots/desktop/user-profile-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-mobile-res.jpg) |
+![Desktop User Profile Page image](/media/screenshots/desktop/user-profile-page-desktop.png) | ![Mobile User Profile Page image ](/media/screenshots/mobile/user-profile-new.jpg) |
 
 #### Delete Workout Confirmation Modal
 
@@ -250,7 +250,7 @@ Desktop | Mobile |
 ### Staff panel page
 Desktop | Mobile |
 --- | --- |
-![Desktop Staff Panel Page image](/media/screenshots/desktop/staff-panel-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-mobile-res.jpg) |
+![Desktop Staff Panel Page image](/media/screenshots/desktop/staff-panel-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-new.jpg) |
 
 ### Authentication pages
 Desktop | Mobile |

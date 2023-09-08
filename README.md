@@ -263,11 +263,13 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Sign In Page image](/media/screenshots/desktop/sign-ip-desktop.PNG) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
 
-Sign In page has just to field to be filled as Username and Password, which user entered when registered new account. 
+Sign In page has just to field to be filled as Username and Password, which user entered when registered new account. There is a checkbox "Remember me" to store user infromation as cookie. Below that there is a "Forgot password" link, that redirects user to a password reset page, where user needs to enter email address and get a link to change password. 
 
 Desktop | Mobile |
 --- | --- |
 ![Desktop Sign Out Page image](/media/screenshots/desktop/sign-out-page-desktop.png) | ![Mobile Sign Out Page image ](/media/screenshots/mobile/sign-out-page-mobile-res.jpg) |
+
+Sign Out page is quite simple and contains only one button - "Sign Out". At this stage action can be reverted and user can go back to other pages without signing out. As a feature feature this page can be changed to modal with same functionality.
 
 # Technologies Used
 

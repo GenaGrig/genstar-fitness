@@ -43,9 +43,9 @@
                     <td class="text-center">{{appointment.workout}}</td>
                     <td class="text-center">{{appointment.day}}</td>
                     <td class="text-center">{{appointment.time}}</td>
-                    <td class="text-center"><a class="btn btn-success" href="{% url 'userUpdate' appointment.id %}">Edit
-                            booking</a>
-                        <button type="button" class="btn btn-danger confirm-delete" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{appointment.id}}">Delete booking</button>
+                    <td class="text-center">
+                        <a href="{% url 'userUpdate' appointment.id %}"><i class="fa-regular fa-pen-to-square fa-xl" style="color: #3d9900;"></i></a>
+                        <i class="fa-solid fa-trash fa-xl ms-3" style="color: #d10000;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{appointment.id}}"></i>
                     </td>
                 </tr>
                 {% endfor %}

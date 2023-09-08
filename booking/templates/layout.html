@@ -28,8 +28,10 @@
   {% endblock %}
 </head>
 
-<body>
+<!-- This is the layout page for the website. It contains the navbar and footer.  -->
 
+<body>
+    <!-- Navigation Bar for profile and booking pages -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand mt-2" href="{% url 'index' %}">GenStar Fitness <i class="fa-solid fa-person-walking fa-flip mt-2" style="color: #ffffff;"></i></a>
@@ -95,7 +97,7 @@
 
   {% block body %}
   {% endblock %}
-
+  <!--Footer Start-->
   <footer class="footer mt-auto py-3 text-center">
     <div class="container">
       <div class="row" style="margin: 0px;">
@@ -142,7 +144,9 @@
     </div>
     </div>
   </footer>
+  <!--Footer End-->
 
+  <!--Messages Script-->
   <script>
     setTimeout(function () {
       let messages = document.getElementById('msg');

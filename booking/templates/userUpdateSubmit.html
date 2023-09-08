@@ -3,8 +3,7 @@
 {% load static %}
 {% block body %}
 
-
-
+<!-- This is the edit booking page for the user where time is selected and updated booking is submitted. -->
 
 {% if user.is_authenticated %}
 <h1 class="text-center fPersian mt-3">Edit Booking</h1>
@@ -23,7 +22,7 @@
             </select>
         </div>
 
-        <!--Book workout button-->
+        <!--Edit booking button-->
         <button type="submit" class="btn btn-primary text-white mt-3">Edit workout</button>
         <!--Back button-->
         <a href="{% url 'booking' %}" class="btn btn-primary text-white mt-3 ms-3" style="padding: 6px 30px;">Back</a>

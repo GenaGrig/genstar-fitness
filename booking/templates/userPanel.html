@@ -32,8 +32,7 @@
             <thead>
                 <tr class="table-primary border-dark">
                     <th class="text-center" scope="col">Workout</th>
-                    <th class="text-center" scope="col">Date</th>
-                    <th class="text-center" scope="col">Time</th>
+                    <th class="text-center" scope="col">Date / Time</th>
                     <th class="text-center" scope="col">Edit / Delete</th>
                 </tr>
             </thead>
@@ -41,8 +40,7 @@
                 {% for appointment in appointments %}
                 <tr class="border-white">
                     <td class="text-center">{{appointment.workout}}</td>
-                    <td class="text-center">{{appointment.day}}</td>
-                    <td class="text-center">{{appointment.time}}</td>
+                    <td class="text-center">{{appointment.day}} at {{appointment.time}}</td>
                     <td class="text-center edit-delete-btn">
                         <a href="{% url 'userUpdate' appointment.id %}"><i class="fa-regular fa-pen-to-square fa-xl" style="color: #3d9900; margin: 10px 0;"></i></a>
                         <i class="fa-solid fa-trash fa-xl fa-stack" style="color: #d10000;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{appointment.id}}"></i>

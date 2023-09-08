@@ -17,24 +17,20 @@
       <table class="table table-bordered table-striped table-hover mx-auto">
           <thead>
             <tr>
-              <th class="text-center" scope="col">First Name</th>
-              <th class="text-center" scope="col">Last Name</th>
+              <th class="text-center" scope="col">First and Last Name</th>
               <th class="text-center" scope="col">User name</th>
               <th class="text-center" scope="col">Workout</th>
-              <th class="text-center" scope="col">Date</th>
-              <th class="text-center" scope="col">Time</th>
+              <th class="text-center" scope="col">Date / Time</th>
               <th class="text-center" scope="col">Delete</th>
             </tr>
           </thead>
           <tbody id="myTable">
               {% for item in items %}
             <tr>
-              <td class="text-center">{{item.user.first_name}}</td>
-              <td class="text-center">{{item.user.last_name}}</td>
+              <td class="text-center">{{item.user.first_name}} {{item.user.last_name}}</td>
               <td class="text-center">{{item.user.username}}</td>
               <td class="text-center">{{item.workout}}</td>
-              <td class="text-center">{{item.day}}</td>
-              <td class="text-center">{{item.time}}</td>
+              <td class="text-center">{{item.day}} at {{item.time}}</td>
               <td class="text-center">
               <i class="fa-solid fa-trash fa-xl mt-2" style="color: #d10000;" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal_{{item.id}}"></i>
             </tr>

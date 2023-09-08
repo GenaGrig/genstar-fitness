@@ -25,12 +25,13 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
     3. [Membership Page](#membership-page)
     4. [Workouts Page](#workouts-page)
     5. [PT Page](#personal-trainer-page)
-    6. [Terms of Use Page](#terms-of-use-page)
-    7. [Profile Page](#profile-page)
-    8. [Edit Profile Page](#edit-profile-page)
-    9. [Booking Pages](#booking-pages)
-    10. [Staff Panel Page](#staff-panel-page)
-    11. [Authentication Pages](#authentication-pages)
+    6. [Contact Page](#contact-page)
+    7. [Terms of Use Page](#terms-of-use-page)
+    8. [Profile Page](#profile-page)
+    9. [Edit Profile Page](#edit-profile-page)
+    10. [Booking Pages](#booking-pages)
+    11. [Staff Panel Page](#staff-panel-page)
+    12. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -173,28 +174,43 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
 
+Main page has one major element which is carousel which contains 3 slides with photos and captions with informative text on them to give to users some basic information about fitness club. It does not scroll automatically, only when user scrolls for the first time, slides start to scroll. But when the mouse is over the slide, automatic scroll stops. 
+
 ### Membership page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Membership Page image](/media/screenshots/desktop/membership-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
+
+Membership page has information about different membership types and which preferences each type gives. There are three types of membership, such as Standart, Student and All Inclusive, each with its own benefits. The button "Buy membership" shold link to checkout page, but for now it is disabled, as payment option is not neccessary in this project. As a future option, membership role will affect booking opportunities, as some membership roles contains exclusive offers. 
 
 ### Workouts page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Workouts Page image](/media/screenshots/desktop/workouts-page-desktop.png) | ![Mobile Workouts Page image ](/media/screenshots/mobile/workouts-page-mobile-res.jpg) |
 
-### PT page (Personal Trainer)
+Workouts page contains all available at the moment workouts that can be booked after user is logged in. The main section is made with a Bootstrap component called 'Accordion'. Each workout in accordion list opens one at a time, closing the previously opened to save space on different screen sizes, espesially phones and skip extra scrolling. As a future option a small book active workout button can be added below each workout description.  
+
+### PT page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Personal Trainer Page image](/media/screenshots/desktop/personal-trainer-page-desktop.png) | ![Mobile Personal Trainer Page image ](/media/screenshots/mobile/personal-trainer-page-mobile-res.jpg) |
 
-### Contact Us page
+Personal trainers page has general infromation about who are personal trainers and with what questions they can help with. Page contains a contact form for the questions regarding personal training, where user can choose a category that suits to users question or leave it as general question. Right now form does not work as planned and it will be fixed in future releases. 
+
+### Contact page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Contact Page image](/media/screenshots/desktop/contact-page-desktop.PNG) | ![Mobile Contact Page image ](/media/screenshots/mobile/contact-page-mobile-res.jpg) |
 
+Contact page contains two general elements, Google map and contact form. It contains also a general contact information, but as it duplicates with footer, it is made just for good looking symmetry. 
+
+Google maps API is responsive and change its size according to screen size. Two containers with contact information and form are also responsive and all elements on a page has a column structure on small screen sizes. 
+
 ### Terms of Use pages
 
+This section is neccessary, because fitness club needs to protect its rights on a website and information its contains. The first document 'Terms and Conditions' contains general rules and regulations for the use of Genstar Fitness's website. By accessing the website user accepts terms and conditions automatically, otherwise user needs to leave website.
+
+Privacy Policy/GDPR is a document that secures visitors privacy. As the website collects and stores users information, this document provides description of which information is collected and how it is used. 
 
 #### Terms and Conditions
 Desktop | Mobile |
@@ -236,14 +252,18 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Staff Panel Page image](/media/screenshots/desktop/staff-panel-page-desktop.png) | ![Mobile Staff Panel Page image ](/media/screenshots/mobile/staff-panel-mobile-res.jpg) |
 
-### Authenticationg pages
+### Authentication pages
 Desktop | Mobile |
 --- | --- |
 ![Desktop Register Account image](/media/screenshots/desktop/register-account-page-desktop.PNG) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-accont-mobile-res.jpg) |
 
+Register New Account form contains three required fields that should be filled to register new user and save users' information to database. Each field has a little description below, to help the user enter correct information and avoid mistakes. After this procedure, user is available to log in to website at anytime. After registration user is redirected to users' profile page directly, without need to sign in. If user already has an account and opened register account page by mistake, there is a direct link to sing in page in header or on navigation bar.
+
 Desktop | Mobile |
 --- | --- |
 ![Desktop Sign In Page image](/media/screenshots/desktop/sign-ip-desktop.PNG) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
+
+Sign In page has just to field to be filled as Username and Password, which user entered when registered new account. 
 
 Desktop | Mobile |
 --- | --- |

@@ -106,7 +106,7 @@ Based on stategy table, not all the features will be implemented in the first de
 
 ### Structure
 
-![Structure of the Genstar Fitness website](/media/screenshots/genstar-fitness-structure.png)
+![Structure of the Genstar Fitness website](/media/screenshots/desktop/genstar-fitness-structure.png)
 
 ### Surface
 
@@ -114,7 +114,7 @@ Based on stategy table, not all the features will be implemented in the first de
 
 Color scheme of blue(#0126fa) for navigation bar background, light blue(#47a9ff) for footer and some container page elements background and white(#ffffff) for text color on a blue or light blue background. These colors are used througout the website and create together mild color palette for user eyes to make the UI and UX smoother.
 
-![Screenshot of color palette for website](/media/screenshots/color-palette.PNG)
+![Screenshot of color palette for website](/media/screenshots/desktop/color-palette.PNG)
 
 #### Fonts
 
@@ -132,17 +132,17 @@ There are several main website elements that are presented on each page.
 
 #### Navigation bar
 * Main navigation bar
-![Screenshot of main navigation bar](/media/screenshots/navigation-bar-main.PNG)
+![Screenshot of main navigation bar](/media/screenshots/desktop/navigation-bar-main.PNG)
 
 Main navigation bar contains all the neccessary buttons for user to get all the information about fitness club services, memberships and contacts. 
 
 * User logged in navigation bar
-![Screenshot of navigation bar when user logged in](/media/screenshots/navigation-bar-logged-in.PNG)
+![Screenshot of navigation bar when user logged in](/media/screenshots/desktop/navigation-bar-logged-in.PNG)
 
 When user is authenticated, on main navigation bar adds three new buttons such as "Book Workout" - as direct link to booking service, "My Profile" - page where user can see all his bookings, edit or delete them; edit profile; make new bookings and "Logout" to logout from account.
 
 * Navigation bar on user profile / booking page
-![Screenshot of navigation bar on user profile/booking page](/media/screenshots/navigation-bar-booking.PNG)
+![Screenshot of navigation bar on user profile/booking page](/media/screenshots/desktop/navigation-bar-booking.PNG)
 
 This is navigation bar which is shown when user clicks on "Book Workout" or "My Profile" buttons after user gets authenticated. On this navbar you can see "Staff Panel" button, which is only available to users which have roles as admins or staff members. This button opens a page where staff members or admins can see all the bookings made by users, filter them or delete. More about this button you can find in [THIS](#staff-panel-page) section.
 
@@ -157,8 +157,8 @@ Footer contains information about:
 
 Flash messages is a very helpful and good for UX tool that flashes when user make some active action such as creating new account or making a new booking. Some other functions when message pops up are - edit profile, edit or delete booking, login and logout.
 
-![Screenshot of flash message after account creation](/media/screenshots/flash-message-new-account.PNG)
-![Screenshot of flash message after new booking](/media/screenshots/flash-message-booking.PNG)
+![Screenshot of flash message after account creation](/media/screenshots/desktop/flash-message-new-account.PNG)
+![Screenshot of flash message after new booking](/media/screenshots/desktop/flash-message-booking.PNG)
 
 ### Mobile menu
 Menu main | Menu auth | Menu profile |

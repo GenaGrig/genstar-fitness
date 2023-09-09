@@ -75,3 +75,40 @@
 
 # Code Validation
 
+### HTML
+
+[The W3C Markup Validator](https://validator.w3.org) was used to check HTML side of a webpage. Following errors were found:
+
+
+* Index page errors
+
+![HTML Validator index page check errors](/media/screenshots/testing/html-index-check-errors.PNG)
+
+* Index page errors fixed
+    * Errors were fixed by changing failed tags to correct and deleting failed attribute
+
+![HTML Validator index page check fixed](/media/screenshots/testing/html-index-check-fixed.PNG)
+
+* Contact page errors
+
+![Contact page errors](/media/screenshots/testing/html-contact-check-errors.PNG)
+
+* Contact page errors fixed
+    * Error was fixed by deleting wrong attribute
+
+![Contact page errors fixed](/media/screenshots/testing/html-contact-check-fix.PNG)
+
+#### All other pages were error free. Some pages html validator was unable to check, giving following error:
+
+![Checking page error 500](/media/screenshots/testing/checking-page-error-500.PNG)
+
+# CSS
+
+For check of CSS in a project [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used.
+
+There are 5 css files in my project, main is style.css, containing all general styling for the project and overriding most of Bootstrap default css. Booking.css, contact.css, membership.css and workout.css were made to override default Bootstrap css in specific files, as there were problem with it when adding to main style.css file.
+
+Each file was checked manually in [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) and no errors were found.
+
+![No errors in CSS files](/media/screenshots/testing/css-check.PNG)
+

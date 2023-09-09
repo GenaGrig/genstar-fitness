@@ -112,3 +112,18 @@ Each file was checked manually in [The W3C CSS Validation Service](https://jigsa
 
 ![No errors in CSS files](/media/screenshots/testing/css-check.PNG)
 
+### Pyhton
+
+Pylint was used continuously during the development process to analyze the Python code for programming errors.
+
+[PEP8 online](http://pep8online.com/) was further used to validate the Python code to validate the Python code for PEP8 requirements. See below the validation results and the reviewed results. 
+
+
+| Location | Errors / Warnings | Code Reviewed |
+| --- | --- | --- |
+| ./fitness/admin.py | No errors / warnings |![admin.py code reviewed image]() |
+| ./fitness/apps.py | No errors / warnings |![apps.py code reviewed image]() |
+| ./fitness/forms.py | ![forms.py errors/warnings image]() | ![forms.py code reviewed image]() |
+| ./fitness/models.py | ![models.py errors/warnings image]() | ![models.py code reviewed image]() |
+| ./fitness/urls.py | ![urls.py errors/warnings image]() | ![urls.py code reviewed image]() |
+| ./fitness/views.py | ![views.py errors/warnings image]() | ![views.py code reviewed image]() |

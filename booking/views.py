@@ -8,9 +8,10 @@ from django.contrib.auth.models import User
 
 def workout_view(request):
     '''Display all workouts in the database'''
-    context = {
-        'all_workouts': Appointment.objects.filter(foo='bar').order_by('workout').all
-        }
+    context = ({
+        'all_workouts':
+            Appointment.objects.filter(foo='bar').order_by('workout').all
+        })
     return render(request, 'booking.html', context=context)
 
 
@@ -19,7 +20,8 @@ def index(request):
 
 
 def booking(request):
-    # Calling 'validWeekday' Function to Loop days you want in the next 30 days:
+    # Calling 'validWeekday' Function to Loop days you want
+    # in the next 30 days:
     weekdays = validWeekday(30)
 
     # Only show the days that are not full:
@@ -78,25 +80,32 @@ def bookingSubmit(request):
 
         if workout is not None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday' or date == 'Saturday' or date == 'Sunday':
+                if date == 'Monday' or date == 'Tuesday' \
+                    or date == 'Wednesday' or date == 'Thursday' \
+                        or date == 'Friday' or date == 'Saturday' \
+                        or date == 'Sunday':
                     if Appointment.objects.filter(day=day).count() < 30:
-                        if Appointment.objects.filter(day=day, time=time).count() < 30:
-                            AppointmentForm = Appointment.objects.get_or_create(
-                                user=user,
-                                workout=workout,
-                                day=day,
-                                time=time,
-                            )
+                        if Appointment.objects.filter(day=day, time=time)\
+                                .count() < 30:
+                            AppointmentForm = \
+                                Appointment.objects.get_or_create(
+                                    user=user,
+                                    workout=workout,
+                                    day=day,
+                                    time=time,
+                                )
                             messages.success(request, "Booking Saved!")
                             return redirect('userPanel')
                         else:
-                            messages.success(request, "The Selected Time Has Been Reserved Before!")
+                            messages.success(request, "The Selected Time Has \
+                                Been Reserved Before!")
                     else:
                         messages.success(request, "The Selected Day Is Full!")
                 else:
                     messages.success(request, "The Selected Date Is Incorrect")
             else:
-                messages.success(request, "The Selected Date Isn't In The Correct Time Period!")
+                messages.success(request, "The Selected Date Isn't In \
+                    The Correct Time Period!")
         else:
             messages.success(request, "Please Select A Workout!")
 
@@ -108,7 +117,8 @@ def bookingSubmit(request):
 def userPanel(request):
     '''Display all bookings for the current user'''
     user = request.user
-    appointments = Appointment.objects.filter(user=user).order_by('day', 'time')
+    appointments = (Appointment.objects.filter(user=user).order_by
+                    ('day', 'time'))
     return render(request, 'userPanel.html', {
         'user': user,
         'appointments': appointments,
@@ -124,8 +134,10 @@ def userUpdate(request, id):
     minDate = today.strftime('%Y-%m-%d')
 
     # 24h if statement in template:
-    delta24 = (userdatepicked).strftime('%Y-%m-%d') >= (today + timedelta(days=30)).strftime('%Y-%m-%d')
-    # Calling 'validWeekday' Function to Loop days you want in the next 30 days:
+    delta24 = (userdatepicked).strftime('%Y-%m-%d') >= \
+        (today + timedelta(days=30)).strftime('%Y-%m-%d')
+    # Calling 'validWeekday' Function to Loop days you want in
+    # the next 30 days:
     weekdays = validWeekday(30)
 
     # Only show the days that are not full:
@@ -188,10 +200,15 @@ def userUpdateSubmit(request, id):
 
         if workout is not None:
             if day <= maxDate and day >= minDate:
-                if date == 'Monday' or date == 'Tuesday' or date == 'Wednesday' or date == 'Thursday' or date == 'Friday' or date == 'Saturday' or date == 'Sunday':
+                if date == 'Monday' or date == 'Tuesday' \
+                    or date == 'Wednesday' or date == 'Thursday' \
+                        or date == 'Friday' or date == 'Saturday'\
+                        or date == 'Sunday':
                     if Appointment.objects.filter(day=day).count() < 30:
-                        if Appointment.objects.filter(day=day, time=time).count() < 30 or userSelectedTime == time:
-                            appointment = Appointment.objects.filter(pk=id).update(
+                        if Appointment.objects.filter(day=day, time=time)\
+                                .count() < 30 or userSelectedTime == time:
+                            appointment = Appointment.objects.filter(pk=id)\
+                                    .update(
                                 user=user,
                                 workout=workout,
                                 day=day,
@@ -200,13 +217,15 @@ def userUpdateSubmit(request, id):
                             messages.success(request, "Booking Edited!")
                             return redirect('userPanel')
                         else:
-                            messages.success(request, "The Selected Time Has Been Reserved Before!")
+                            messages.success(request, "The Selected Time Has\
+                                Been Reserved Before!")
                     else:
                         messages.success(request, "The Selected Day Is Full!")
                 else:
                     messages.success(request, "The Selected Date Is Incorrect")
             else:
-                messages.success(request, "The Selected Date Isn't In The Correct Time Period!")
+                messages.success(request, "The Selected Date Isn't In The\
+                    Correct Time Period!")
         else:
             messages.success(request, "Please Select A Workout!")
         return redirect('userPanel')
@@ -225,7 +244,8 @@ def staffPanel(request):
     strdeltatime = deltatime.strftime('%Y-%m-%d')
     maxDate = strdeltatime
     # Only show the Appointments 30 days from today
-    items = Appointment.objects.filter(day__range=[minDate, maxDate]).order_by('day', 'time')
+    items = (Appointment.objects.filter
+             (day__range=[minDate, maxDate]).order_by('day', 'time'))
 
     return render(request, 'staffPanel.html', {
         'items': items,
@@ -246,7 +266,9 @@ def validWeekday(days):
     for i in range(0, days):
         x = today + timedelta(days=i)
         y = x.strftime('%A')
-        if y == 'Monday' or y == 'Tuesday' or y == 'Wednesday' or y == 'Thursday' or y == 'Friday' or y == 'Saturday' or y == 'Sunday':
+        if y == 'Monday' or y == 'Tuesday' \
+            or y == 'Wednesday' or y == 'Thursday' or y == 'Friday' \
+                or y == 'Saturday' or y == 'Sunday':
             weekdays.append(x.strftime('%Y-%m-%d'))
     return weekdays
 
@@ -275,7 +297,8 @@ def checkEditTime(times, day, id):
     appointment = Appointment.objects.get(pk=id)
     time = appointment.time
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 30 or time == k:
+        if Appointment.objects.filter(day=day, time=k).count() < 30 \
+                or time == k:
             x.append(k)
     return x
 
@@ -318,7 +341,8 @@ def update_profile(request):
     '''Update a user's profile'''
     if request.user.is_authenticated:
         current_user = User.objects.get(id=request.user.id)
-        form = MyUserChangeForm(request.POST or None, request.FILES or None, instance=current_user)
+        form = (MyUserChangeForm(request.POST or None, request.FILES or None,
+                                 instance=current_user))
         if form.is_valid():
             form.save()
             messages.success(request, "Your Profile Has Been Updated!")

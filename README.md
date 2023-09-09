@@ -39,7 +39,7 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
     4. [Database Management](#database-management)
     5. [Tools and Programs](#tools-and-programs)
 4. [Testing](#testing)
-    1. [Go to TESTING.md]()
+    1. [Go to TESTING.md](https://github.com/GenaGrig/genstar-fitness/blob/main/TESTING.md)
 5. [Deployment](#deployment)
 6. [Credits](#credits)
 7. [Known Bugs](#known-bugs)
@@ -403,7 +403,7 @@ Some features where mentioned directly in page description, but lets summarize t
 
 # Testing
 
-The testing is available in separate file [TESTING.md] 
+The testing is available in separate file [TESTING.md](https://github.com/GenaGrig/genstar-fitness/blob/main/TESTING.md)
 
 # Deployment
 

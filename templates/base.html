@@ -4,134 +4,145 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GenStar Fitness is a gym located in the heart of Umeå. We offer a wide range of facilities and services to our members.">
-    <meta name="keywords" content="GenStar Fitness, Gym, Umeå, Workout, Personal Trainer, PT, Membership, Training, Health, Fitness, Gym Umeå">
-    <meta name="author" content="GenStar Fitness">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/membership.css' %}">
-    <link rel="stylesheet" href="{% static 'css/workouts.css' %}">
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/fa2786a92a.js" crossorigin="anonymous"></script>
-  
-    <title>GenStar Fitness</title>
-</head>
-<body>
-    
-{% comment %} Navigation Bar {% endcomment %}
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand mt-2" href="{% url 'index' %}">GenStar Fitness <i class="fa-solid fa-person-walking fa-flip mt-2" style="color: #ffffff;"></i></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
-      aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvasLg"
-      aria-labelledby="navbarOffcanvasLgLabel">
-      <div class="offcanvas-header" style="justify-content: space-evenly;">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GenStar Fitness</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body navbar-nav">
-        <ul class="navbar-nav nav-underline flex-grow-1 mt-3">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'membership' %}">Membership</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'workouts' %}">Workouts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'personal_trainer' %}">PT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Terms of Use
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url 'terms-and-conditions' %}">Terms and Conditions</a></li>
-              <li><a class="dropdown-item" href="{% url 'privacy-policy' %}">Privacy Policy/GDPR</a></li>
-            </ul>
-          </li>
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'booking' %}"><i class="fa-regular fa-user"></i> Book Workout</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'userPanel' %}"><i class="fa-regular fa-bookmark"
-                style="color: #ffffff;"></i> My Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"
-                style="color: #ffffff;"></i> Logout</a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}"><i class="fa-solid fa-unlock-keyhole"></i> Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-plus"></i> Register</a>
-          </li>
-          {% endif %}
-        </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="GenStar Fitness is a gym located in the heart of Umeå. We offer a wide range of facilities and services to our members.">
+  <meta name="keywords"
+    content="GenStar Fitness, Gym, Umeå, Workout, Personal Trainer, PT, Membership, Training, Health, Fitness, Gym Umeå">
+  <meta name="author" content="GenStar Fitness">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/membership.css' %}">
+  <link rel="stylesheet" href="{% static 'css/workouts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/fa2786a92a.js" crossorigin="anonymous"></script>
+
+  <title>GenStar Fitness</title>
+</head>
+
+<body>
+
+  {% comment %} Navigation Bar {% endcomment %}
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand mt-2" href="{% url 'index' %}">GenStar Fitness <i
+          class="fa-solid fa-person-walking fa-flip mt-2" style="color: #ffffff;"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+        aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="offcanvas-header" style="justify-content: space-evenly;">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">GenStar Fitness</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body navbar-nav">
+          <ul class="navbar-nav nav-underline flex-grow-1 mt-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'membership' %}">Membership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'workouts' %}">Workouts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'personal_trainer' %}">PT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Terms of Use
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'terms-and-conditions' %}">Terms and Conditions</a></li>
+                <li><a class="dropdown-item" href="{% url 'privacy-policy' %}">Privacy Policy/GDPR</a></li>
+              </ul>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'booking' %}"><i class="fa-regular fa-user"></i> Book Workout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'userPanel' %}"><i class="fa-regular fa-bookmark"
+                  style="color: #ffffff;"></i> My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"
+                  style="color: #ffffff;"></i> Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_login' %}"><i class="fa-solid fa-unlock-keyhole"></i> Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'register' %}"><i class="fa-solid fa-user-plus"></i> Register</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
       </div>
     </div>
+  </nav>
+
+  {% comment %} # Flash Messages {% endcomment %}
+
+  <div class="col-md-8 offset-md-2">
+    {% for message in messages %}
+    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+      {{ message | safe }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
   </div>
-</nav>
 
-{% comment %} # Flash Messages {% endcomment %}
+  <main>
 
-      <div class="col-md-8 offset-md-2">
-          {% for message in messages %}
-          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-              {{ message | safe }}
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          {% endfor %}
-      </div>
+    {% block content %}
 
-<main>
+    {% endblock %}
 
-{% block content %}
+  </main>
 
-{% endblock %}
+  {% comment %} # Footer {% endcomment %}
 
-</main>
-
-{% comment %} # Footer {% endcomment %}
-
-{% comment %} <div class="container">
+  {% comment %} <div class="container">
 
     <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
+              class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
+              class="fa fa-instagram" aria-hidden="true"></i></a></li>
+      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
+              class="fa fa-facebook" aria-hidden="true"></i></a></li>
     </ul>
-  </footer>
-</div> {% endcomment %}
+    </footer>
+  </div> {% endcomment %}
 
-<footer class="footer mt-auto py-3">
+  <footer class="footer mt-auto py-3">
     <div class="container">
       <div class="row" style="margin: 0px;">
         <div class="col-md-4">
           <h4>Opening hours:</h4>
-          <h5 class="text-white"><strong>Monday - Sunday: 06:00 - 24:00</strong></h6>
-          <h5>Reception:</h3>
-            <h5 class="text-white"><strong>Monday - Friday: 10:00 - 18:00</strong></h5>
-            <h5 class="text-white"><strong>Saturday - Sunday: 10:00 - 14:00</strong></h5>
+          <h5 class="text-white"><strong>Monday - Sunday: 06:00 - 24:00</strong></h5>
+          <h5>Reception:</h5>
+          <h5 class="text-white"><strong>Monday - Friday: 10:00 - 18:00</strong></h5>
+          <h5 class="text-white"><strong>Saturday - Sunday: 10:00 - 14:00</strong></h5>
         </div>
         <div class="col-md-4">
           <h4>Visit or Contact Us:</h4>
@@ -142,14 +153,21 @@
           <h5>Phone:</h5>
           <h5 class="text-white"><strong>090-123 45 67</strong></h5>
           <h5>Email:</h5>
-          <h5 class="text-white"><strong><a href="mailto:genstarfitness@gmail.com">genstarfitness@gmail.com</a></strong></h5>
+          <h5 class="text-white"><strong><a href="mailto:genstarfitness@gmail.com">genstarfitness@gmail.com</a></strong>
+          </h5>
         </div>
         <div class="col-md-4">
           <h5>Follow Us:</h5>
           <ul class="text-center" style="list-style-type: none">
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><h6> Twitter</h6></a></li>
-            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><h6> Instagram</h6></a></li>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i><h6> Facebook</h6></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+                <h6> Twitter</h6>
+              </a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+                <h6> Instagram</h6>
+              </a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+                <h6> Facebook</h6>
+              </a></li>
           </ul>
         </div>
       </div>
@@ -159,14 +177,14 @@
         <h5>&copy; GenStar Fitness 2023</h5>
       </div>
     </div>
-  </div>
-</footer>
-<script>
-  setTimeout(function () {
+  </footer>
+  <script>
+    setTimeout(function () {
       let messages = document.getElementById('msg');
       let alert = new bootstrap.Alert(messages);
       alert.close();
-  }, 3000);
-</script>
+    }, 3000);
+  </script>
 </body>
+
 </html>

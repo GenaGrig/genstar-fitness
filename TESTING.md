@@ -102,7 +102,7 @@
 
 ![Checking page error 500](/media/screenshots/testing/checking-page-error-500.PNG)
 
-# CSS
+### CSS
 
 For check of CSS in a project [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used.
 
@@ -112,18 +112,32 @@ Each file was checked manually in [The W3C CSS Validation Service](https://jigsa
 
 ![No errors in CSS files](/media/screenshots/testing/css-check.PNG)
 
-### Pyhton
+### Python
 
 Pylint was used continuously during the development process to analyze the Python code for programming errors.
 
-[PEP8 online](http://pep8online.com/) was further used to validate the Python code to validate the Python code for PEP8 requirements. See below the validation results and the reviewed results. 
+[CI Python Linter](https://pep8ci.herokuapp.com) was used to validate the Python code to validate the Python code for PEP8 requirements. Results are in a table below:
 
 
 | Location | Errors / Warnings | Code Reviewed |
 | --- | --- | --- |
-| ./fitness/admin.py | No errors / warnings |![admin.py code reviewed image]() |
-| ./fitness/apps.py | No errors / warnings |![apps.py code reviewed image]() |
-| ./fitness/forms.py | ![forms.py errors/warnings image]() | ![forms.py code reviewed image]() |
-| ./fitness/models.py | ![models.py errors/warnings image]() | ![models.py code reviewed image]() |
-| ./fitness/urls.py | ![urls.py errors/warnings image]() | ![urls.py code reviewed image]() |
-| ./fitness/views.py | ![views.py errors/warnings image]() | ![views.py code reviewed image]() |
+| ./fitness/admin.py | No errors / warnings |![admin.py code reviewed image](/media/screenshots/testing/fitness-admin-py-clean.PNG) |
+| ./fitness/apps.py | No errors / warnings |![apps.py code reviewed image](/media/screenshots/testing/fitness-apps-py-clean.PNG) |
+| ./fitness/forms.py | ![forms.py errors/warnings image](/media/screenshots/testing/fitness-forms-py-errors.PNG) | ![forms.py code reviewed image](/media/screenshots/testing/fitness-forms-py-errors.PNG) |
+| ./fitness/models.py | ![models.py errors/warnings image](/media/screenshots/testing/fitness-models-py-errors.PNG) | ![models.py code reviewed image](/media/screenshots/testing/fitness-models-py-clean.PNG) |
+| ./fitness/urls.py | No errors / warnings | ![urls.py code reviewed image](/media/screenshots/testing/fitness-urls-py-clean.PNG) |
+| ./fitness/views.py | ![views.py errors/warnings image](/media/screenshots/testing/fitness-views-py-errors.PNG) | ![views.py code reviewed image](/media/screenshots/testing/fitness-views-py-clean.PNG) |
+| ./booking/admin.py | No errors / warnings |![admin.py code reviewed image](/media/screenshots/testing/booking-admin-py-clear.PNG) |
+| ./booking/apps.py | No errors / warnings |![apps.py code reviewed image](/media/screenshots/testing/booking-apps-py-clear.PNG) |
+| ./booking/forms.py | ![forms.py errors/warnings image](/media/screenshots/testing/booking-forms-py-errors.PNG) | ![forms.py code reviewed image](/media/screenshots/testing/booking-forms-py-clear.PNG) |
+| ./booking/models.py | ![models.py errors/warnings image](/media/screenshots/testing/booking-models-py-errors.PNG) | ![models.py code reviewed image](/media/screenshots/testing/booking-models-py-clear.PNG) |
+| ./booking/urls.py | ![urls.py errors/warnings image](/media/screenshots/testing/booking-urls-py-errors.PNG) | ![urls.py code reviewed image](/media/screenshots/testing/booking-urls-py-clear.PNG) |
+| ./booking/views.py | ![views.py errors/warnings image](/media/screenshots/testing/booking-views-py-errors.PNG) | ![views.py code reviewed image](/media/screenshots/testing/booking-views-py-clear.PNG) |
+
+### JavaScript
+
+[JSHint, a JavaScript Code Validator](https://jshint.com) was used to check JS code.
+
+No errors were found.
+
+# Accessibility

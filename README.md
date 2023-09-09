@@ -28,7 +28,7 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
     6. [Contact Page](#contact-page)
     7. [Terms of Use Page](#terms-of-use-page)
     8. [Profile Page](#profile-page)
-    9. [Edit Profile Page](#edit-profile-page)
+    9. [Update Profile Page](#update-profile-page)
     10. [Booking Pages](#booking-pages)
     11. [Staff Panel Page](#staff-panel-page)
     12. [Authentication Pages](#authentication-pages)
@@ -41,10 +41,9 @@ Github repository you can find here - [Github repo](https://github.com/GenaGrig/
 4. [Testing](#testing)
     1. [Go to TESTING.md]()
 5. [Deployment](#deployment)
-6. [Finished Product](#finished-product)
-7. [Credits](#credits)
-8. [Known Bugs](#known-bugs)
-9. [Acknowledgements](#acknowledgements)
+6. [Credits](#credits)
+7. [Known Bugs](#known-bugs)
+8. [Acknowledgements](#acknowledgements)
 
 ***
 
@@ -135,7 +134,7 @@ There are several main website elements that are presented on each page.
 * Main navigation bar
 ![Screenshot of main navigation bar](/media/screenshots/navigation-bar-main.PNG)
 
-Main navigation bar contains all the neccessary buttons for user to get all the information about fitness club services, pricing and contacts. 
+Main navigation bar contains all the neccessary buttons for user to get all the information about fitness club services, memberships and contacts. 
 
 * User logged in navigation bar
 ![Screenshot of navigation bar when user logged in](/media/screenshots/navigation-bar-logged-in.PNG)
@@ -242,12 +241,12 @@ Desktop | Mobile |
 
 This is an extended feature for user convenience and to be sure that user will not delete booking accidentally. The same feature is realised on staff panel for the same reason.
 
-### Edit profile page
+### Update profile page
 Desktop | Mobile |
 --- | --- |
-![Desktop Edit Profile Page image](/media/screenshots/desktop/update-profile-form-desktop.PNG) | ![Mobile Edit Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
+![Desktop Update Profile Page image](/media/screenshots/desktop/update-profile-form-desktop.PNG) | ![Mobile Update Profile Page image ](/media/screenshots/mobile/update-profile-mobile-res.jpg) |
 
-This page allows user to edit profile and change such information as first and last name (empty by default), username and email. As a future feature change of password and some extra fields can be added.
+This page allows user to update profile and change such information as first and last name (empty by default), username and email. As a future feature change of password and some extra fields can be added.
 
 ### Booking pages
 Desktop | Mobile |
@@ -276,17 +275,24 @@ Staff panel is made only for admins and staff members. On this panel staff membe
 
 
 ### Authentication pages
+
+#### Register New Account
+
 Desktop | Mobile |
 --- | --- |
 ![Desktop Register Account image](/media/screenshots/desktop/register-account-page-desktop.PNG) | ![Mobile Register Account Page image ](/media/screenshots/mobile/register-accont-mobile-res.jpg) |
 
 Register New Account form contains three required fields that should be filled to register new user and save users' information to database. Each field has a little description below, to help the user enter correct information and avoid mistakes. After this procedure, user is available to log in to website at anytime. After registration user is redirected to users' profile page directly, without need to sign in. If user already has an account and opened register account page by mistake, there is a direct link to sing in page in header or on navigation bar.
 
+#### Sign In page
+
 Desktop | Mobile |
 --- | --- |
 ![Desktop Sign In Page image](/media/screenshots/desktop/sign-ip-desktop.PNG) | ![Mobile Sign In Page image ](/media/screenshots/mobile/sign-in-page-mobile-res.jpg) |
 
 Sign In page has just to field to be filled as Username and Password, which user entered when registered new account. There is a checkbox "Remember me" to store user infromation as cookie. Below that there is a "Forgot password" link, that redirects user to a password reset page, where user needs to enter email address and get a link to change password. 
+
+#### Sign Out
 
 Desktop | Mobile |
 --- | --- |
@@ -300,7 +306,16 @@ Some features where mentioned directly in page description, but lets summarize t
 
 * Membership. Membership role will affect booking opportunities, as some membership roles contains exclusive offers
 * Membership. Workouts can be booked only by fitness club members (now it can do everyone, who has an active account) or those who have free pass or onetime payment (requires payment system on a website)
+* Workout. Schedule for each workout with fixed days and times
+* Personal Trainer. Possibility to book a personal trainer session both free and for a fixed price
+* Personal Trainer and Contact pages contact forms should send messages to user emails
+* Update profile should be able to change password. Several field with information should be available to update, such as address, city, country and telephone number
+* Booking. All booking process on one page
+* Booking. Booking for non-members for free (testing pass) or fixed price
+* Register form with more information, such as first and last name and telephone number
+* Sign out function as a modal, to skip the separate sign out page. 
 
+[Back to top ⇧](#genstar-fitness)
 
 # Technologies Used
 
@@ -352,7 +367,7 @@ Some features where mentioned directly in page description, but lets summarize t
      * GitPod was used for writing code, committing, and then pushing to GitHub.
 
 * [GitHub](https://github.com)  
-   GitHub was used to store the projects code after being pushed from Git. 
+    * GitHub was used to store the projects code after being pushed from Git. 
 
 * [Heroku](https://www.heroku.com)   
     * Heroku was used to deploy the website.
@@ -387,6 +402,8 @@ Some features where mentioned directly in page description, but lets summarize t
 [Back to top ⇧](#genstar-fitness)
 
 # Testing
+
+The testing is available in separate file [TESTING.md] 
 
 # Deployment
 
@@ -471,14 +488,43 @@ git clone https://github.com/GenaGrig/genstar-fitness.git
 
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#genstar-fitness)
 
 # Credits
 
-This resources were used as a help to create [GenStar Fitness](https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/) website.
+This resources were used as a help to create [GenStar Fitness](https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/) website:
+
+### Content
+* Website content was written by the developer
+* README file was written with help of following documents:
+    * Code Institute [README template](https://github.com/Code-Institute-Solutions/readme-template)
+    * GitHubs [Basic writing and formatting syntax](https://docs.github.com/ru/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings)
+    * Hints and some structure of README files from existing projects from other CI students
+
+### Media
 
 * [New register user form tutorial](https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1)
 * [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
 * [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
 * [Booking system tutorial](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
 * [Booking system tutorial video guide](https://youtu.be/s5xbtuo9pR0?si=x7hmhprUzVnpzoAJ)
+* [404 image was taken here](https://pxhere.com/ru/photo/1380359)
+
+### Code
+
+* [Code Institutes' Slack channel](www.slack.com) was used to get help from its students in resolving code problems and questions
+* [Bootstrap 5](https://getbootstrap.com/) website was used very often to fix the problems with different elements and get resposive design work
+* Some of code functions was written with help of [GitHub Copilot](https://github.com/features/copilot)
+
+[Back to top ⇧](#genstar-fitness)
+
+# Known Bugs
+
+* Booking of workouts is available to everyone who has registered account, membership role does not work and affect booking opportunities for now
+
+# Acknowledgements
+
+* I want to thank my mentor Marcel Mulders for very good feedback and very useful advices that made my project complete and interesting. Very good ideas from my mentor that was implemented and made project look more solid.
+* I want to thank members in our Code Institute Slack community for giving feedback and showing their own projects that was inspiring in different ways.
+
+[Back to top ⇧](#genstar-fitness)

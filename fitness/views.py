@@ -117,3 +117,8 @@ def contact(request):
 
     else:
         return render(request, 'contact.html', {})
+    
+    
+def PageNotFoundView(request):
+    '''404 Page not found'''
+    return render(request, '404.html', {})

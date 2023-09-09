@@ -317,7 +317,7 @@ Some features where mentioned directly in page description, but lets summarize t
 * [Django](https://www.djangoproject.com/)   
     * Django was used as web framework.
    
-* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)  
+* [Bootstrap 5](https://getbootstrap.com/)  
     * Bootstrap 5 was used throughout the website to help with styling and responsiveness.
 
 * [Font Awesome](https://fontawesome.com)  
@@ -374,6 +374,15 @@ Some features where mentioned directly in page description, but lets summarize t
 
 * [JSHint](https://jshint.com/) 
     * The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
+
+* [Google Maps](https://www.google.com/maps)
+    * Google maps API to embed google map with location on a website.
+
+* [Terms and Conditions generator](https://www.termsandconditionsgenerator.com)
+    * Terms and Conditions generator was used to create an agreement between website and user for protection of GenStar Fitness website rights
+
+* [Privacy Policy generator](https://www.termsfeed.com/privacy-policy-generator/)
+    * Privacy Policy generator was used to create a document describing which information GenStar Fitness website collects and stores and how it secures users privacy
 
 [Back to top ⇧](#genstar-fitness)
 
@@ -465,7 +474,11 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 [Back to top ⇧](#code-buddy)
 
 # Credits
-* [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
-* [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
+
+This resources were used as a help to create [GenStar Fitness](https://genstar-fitness-and-gym-0d51dc3aa6d0.herokuapp.com/) website.
+
 * [New register user form tutorial](https://www.youtube.com/watch?v=JeTGxvFnAaU&list=TLPQMDYwODIwMjOuesC_k1wr0A&index=1)
+* [Update user profile tutorial](https://www.youtube.com/watch?v=F5kTZdi_c5k)
+* [Fix problem with updating user profile, username already exists](https://www.appsloveworld.com/django/100/94/django-user-account-update-ignore-user-with-this-username-already-exists)
 * [Booking system tutorial](https://blog.devgenius.io/django-tutorial-on-how-to-create-a-booking-system-for-a-health-clinic-9b1920fc2b78)
+* [Booking system tutorial video guide](https://youtu.be/s5xbtuo9pR0?si=x7hmhprUzVnpzoAJ)

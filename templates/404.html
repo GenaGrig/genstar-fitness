@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid my-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 pt-3">
+            <div class="card mb-3">
+
+                <img class="card-img-top"
+                    src="/media/screenshots/desktop/404-error.jpg"
+                    alt="404 numbers collected from Lego bricks.">
+                <div class="card-body">
+
+                    <h3 class="card-title text-center error-msg my-4">Sorry, page is unavailable right now, come back later!</h3>
+
+                    <h3 class="card-title text-center error-msg">  Return to 
+                        <a href="{% url 'index' %}" class="link-color-light-blue text-decoration-none"> main page.</a>
+                    </h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

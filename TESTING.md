@@ -106,7 +106,9 @@
 
 For check of CSS in a project [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used.
 
-There are 4 css files in my project, main is style.css, containing all general styling for the project and overriding most of Bootstrap default css. Booking.css, membership.css and workout.css were made to override default Bootstrap css in specific files, as there were problem with css override when adding to main style.css file. All attempts to join all css files in one were not successfull, as design broke and only discard of changes helped to restore it.
+There are 4 css files in my project, main is style.css, containing all general styling for the project and overriding most of Bootstrap default css. Booking.css, membership.css and workout.css were made to override default Bootstrap css in specific files, as there were problem with css override when adding to main style.css file. All attempts to join all css files in one were not successfull, as design broke and only discard of changes helped to restore it. 
+
+There are no repetitions, comment out or double code accross all css files.
 
 Each file was checked manually in [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) and no errors were found.
 

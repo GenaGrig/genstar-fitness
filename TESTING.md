@@ -161,3 +161,40 @@ Page | Lighthouse Report |
 | Staff Panel | ![Staff Panel Page Lighthouse Report](/media/screenshots/testing/lighthouse/staff-panel-lighthouse-report.PNG) |
 | Book Workout | ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking1-lighthouse-report.PNG) |
 | Book Workout Submit| ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking2-lighthouse-report.PNG) |
+
+## Tools Testing
+
+### [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+
+### Responsiveness
+
+* Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+
+## Manual Testing
+
+### Browser Compatibility
+
+Browser | Outcome | Pass/Fail | 
+--- | --- | --- |
+Google Chrome | No appearance, responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Safari | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Mozilla Firefox | No responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+
+
+### Device Compatibility
+
+Device | Operative System |Outcome | Pass/Fail
+--- | --- | --- | --- |
+Dell Optiplex 7060 | Windows 11 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+MacBook Pro 15" | macOS Big Sur | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Dell Latitude 5300 | Windows 10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPad Pro 12.9" | iOS 15 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPad Pro 10.5" | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPhone XR | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+

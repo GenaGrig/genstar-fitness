@@ -181,8 +181,8 @@ Chrome DevTools was used during the development process to test, explore and mod
 Browser | Outcome | Pass/Fail | 
 --- | --- | --- |
 Google Chrome | No appearance, responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
-Safari | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-Mozilla Firefox | No responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
+Opera | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Mozilla Firefox | No appearance, responsiveness nor functionality issues.| <span style="color:green">Pass</span> |
 Microsoft Edge | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
 
 
@@ -190,11 +190,13 @@ Microsoft Edge | No appearance, responsiveness nor functionality issues. | <span
 
 Device | Operative System |Outcome | Pass/Fail
 --- | --- | --- | --- |
-Dell Optiplex 7060 | Windows 11 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-MacBook Pro 15" | macOS Big Sur | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-Dell Latitude 5300 | Windows 10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-iPad Pro 12.9" | iOS 15 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-iPad Pro 10.5" | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-iPhone XR | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
-iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+MSI Katana 15.6" | Windows 11 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Asus Rog Strix Desktop 27" | Windows 10 | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Lenovo Pad | Android | No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Samsung S21 6.2" | Android |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality issues. | <span style="color:green">Pass</span> |
+
+### Test results
+
+
 

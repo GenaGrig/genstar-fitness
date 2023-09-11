@@ -120,70 +120,75 @@
 
   {% comment %} # Footer {% endcomment %}
 
-  {% comment %} <div class="container">
+<div class="container">
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
-              class="fa fa-twitter" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
-              class="fa fa-instagram" aria-hidden="true"></i></a></li>
-      <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
-              class="fa fa-facebook" aria-hidden="true"></i></a></li>
-    </ul>
-    </footer>
-  </div> {% endcomment %}
-
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <div class="row" style="margin: 0px;">
-        <div class="col-md-4">
-          <h4>Opening hours:</h4>
-          <h5 class="text-white"><strong>Monday - Sunday: 06:00 - 24:00</strong></h5>
-          <h5>Reception:</h5>
-          <h5 class="text-white"><strong>Monday - Friday: 10:00 - 18:00</strong></h5>
-          <h5 class="text-white"><strong>Saturday - Sunday: 10:00 - 14:00</strong></h5>
-        </div>
-        <div class="col-md-4">
-          <h4>Visit or Contact Us:</h4>
-          <h5>Address:</h5>
-          <h5 class="text-white"><strong>GenStar Fitness</strong></h5>
-          <h5 class="text-white"><strong>Björnvägen 21</strong></h5>
-          <h5 class="text-white"><strong>906 40 Umeå</strong></h5>
-          <h5>Phone:</h5>
-          <h5 class="text-white"><strong>090-123 45 67</strong></h5>
-          <h5>Email:</h5>
-          <h5 class="text-white"><strong><a href="mailto:genstarfitness@gmail.com">genstarfitness@gmail.com</a></strong>
-          </h5>
-        </div>
-        <div class="col-md-4">
-          <h5>Follow Us:</h5>
-          <ul class="text-center" style="list-style-type: none">
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
-                <h6> Twitter</h6>
-              </a></li>
-            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
-                <h6> Instagram</h6>
-              </a></li>
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
-                <h6> Facebook</h6>
-              </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row" style="margin: 0px;">
-      <div class="col-md-12 text-center">
-        <h5>&copy; GenStar Fitness 2023</h5>
-      </div>
-    </div>
+  <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
+            class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
+            class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><i
+            class="fa fa-facebook" aria-hidden="true"></i></a></li>
+  </ul>
   </footer>
-  <script>
-    setTimeout(function () {
-      let messages = document.getElementById('msg');
-      let alert = new bootstrap.Alert(messages);
-      alert.close();
-    }, 3000);
-  </script>
+</div>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <div class="row" style="margin: 0px;">
+      <div class="col-md-4">
+        <h4>Opening hours:</h4>
+        <h5 class="text-white"><strong>Monday - Sunday: 06:00 - 24:00</strong></h5>
+        <h5>Reception:</h5>
+        <h5 class="text-white"><strong>Monday - Friday: 10:00 - 18:00</strong></h5>
+        <h5 class="text-white"><strong>Saturday - Sunday: 10:00 - 14:00</strong></h5>
+      </div>
+      <div class="col-md-4">
+        <h4>Visit or Contact Us:</h4>
+        <h5>Address:</h5>
+        <h5 class="text-white"><strong>GenStar Fitness</strong></h5>
+        <h5 class="text-white"><strong>Björnvägen 21</strong></h5>
+        <h5 class="text-white"><strong>906 40 Umeå</strong></h5>
+        <h5>Phone:</h5>
+        <h5 class="text-white"><strong>090-123 45 67</strong></h5>
+        <h5>Email:</h5>
+        <h5 class="text-white"><strong><a href="mailto:genstarfitness@gmail.com">genstarfitness@gmail.com</a></strong>
+        </h5>
+      </div>
+      <div class="col-md-4">
+        <h5>Follow Us:</h5>
+        <ul class="text-center" style="list-style-type: none">
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>
+              <h6> Twitter</h6>
+            </a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>
+              <h6> Instagram</h6>
+            </a></li>
+          <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>
+              <h6> Facebook</h6>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin: 0px;">
+    <div class="col-md-12 text-center">
+      <h5>&copy; GenStar Fitness 2023</h5>
+    </div>
+  </div>
+</footer>
+
+{% comment %} # Messages script {% endcomment %}
+
+<script>
+  setTimeout(function () {
+    let messages = document.getElementById('msg');
+    let alert = new bootstrap.Alert(messages);
+    alert.close();
+  }, 3000);
+</script>
+
+
 </body>
 
 </html>

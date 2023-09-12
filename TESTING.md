@@ -73,6 +73,8 @@
 * Registered site users has access to CRUD functionality on their Profile page
 * Booking can be added, seen in My Booking, edited and deleted in appropriate row with help of related icons
 
+[Back to top ⇧](#genstar-fitness-testing)
+
 # Code Validation
 
 ### HTML
@@ -142,6 +144,8 @@ Pylint was used continuously during the development process to analyze the Pytho
 
 No errors were found.
 
+[Back to top ⇧](#genstar-fitness-testing)
+
 # Accessibility
 
 ### Lighthouse Reports
@@ -164,7 +168,9 @@ Page | Lighthouse Report |
 | Book Workout | ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking1-lighthouse-report.PNG) |
 | Book Workout Submit| ![Book Workout Page Lighthouse Report](/media/screenshots/testing/lighthouse/booking2-lighthouse-report.PNG) |
 
-## Tools Testing
+[Back to top ⇧](#genstar-fitness-testing)
+
+# Tools Testing
 
 ### [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 
@@ -1158,3 +1164,5 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td><span style="color:green">Pass</span></td>
     </tr>
 </table>
+
+[Back to top ⇧](#genstar-fitness-testing)

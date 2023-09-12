@@ -454,4 +454,709 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
     </tr>
 </table>
 
+#### Home page
 
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Carousel</td>
+        <td rowspan=2>Left/Right scroll buttons</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the Left/Rights scroll button slides images.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+</table>
+
+#### Membership page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Membership button</td>
+        <td rowspan=2>Buy membership buttons</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the Buy membership button should redirtect user to check out page.</td>
+        <td><span style="color:red">Not available now</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Bootstrap button CSS</td>
+        <td>Pass</td>
+    </tr>
+</table>
+
+#### Workouts page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Accordion</td>
+        <td rowspan=2>Accordion slides</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking each accordion slide should open its content and close previous.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>General styling</td>
+        <td>Pass</td>
+    </tr>
+</table>
+
+#### Personal Trainer page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=10>Contact form</td>
+        <td rowspan=2>Name input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Email input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is required and validates input text as email.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Select subject</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is optional and no subject can be chosen.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Message</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Send</td>
+        <td rowspan=2>Send button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button should submit this form.</td>
+        <td><span style="color:red">Error 405</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Bootstrap button CSS</td>
+        <td>Pass</td>
+    </tr>
+</table>
+
+#### Contact Us page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Google maps API</td>
+        <td rowspan=2>Google maps</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Google maps embedded to page and shows map with chosen location.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Responsive design on all screen sizes.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=10>Contact form</td>
+        <td rowspan=2>Name input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Email input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is required and validates input text as email.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Message</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is required and validates input.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Submit</td>
+        <td rowspan=2>Submit button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button should submit this form.</td>
+        <td><span style="color:red">Error 405</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Bootstrap button CSS</td>
+        <td>Pass</td>
+    </tr>
+</table>
+
+#### Register Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=10>Register New Account</td>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the username already exists.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>E-mail input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is an email address.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password.<br>Display message if password is not valid.<br>Display message if both passwords are not equal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password Repeat input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid password<br>Display message if password is not valid<br>Display message if both passwords are not equal</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign Up button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the User Profile page.<br>Create user if form is valid.<br>Display message if user is successfully created.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Login Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=6>Sign In Form</td>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+         <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the usernameand/or password are not correct.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Password input</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Display message if the usernameand/or password are not correct.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign In button</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking the button authenticates the user and redirect to the User Profile page.<br>Display message if credentials are not valid.<br>Display message if user login successfully.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+
+#### Logout Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Sign Out Page</td>
+        <td rowspan=2>Sign Out button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button sign out the user and redirect to the Home page.<br>Display message if user logout successfully.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### User Profile page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=8>Page Buttons</td>
+        <td rowspan=2>Edit Profile button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking Edit Profile button redirects to Edit Profile page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Book Workout button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking Book Workout button redirects to Book Workout page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+     <tr>
+        <td rowspan=2>Edit Workout icon/button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking Edit Workout button redirects to Edit Workout page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete Workout icon/button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking Delete Workout button opens confirmation modal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=4>Delete confirmation modal</td>
+        <td rowspan=2>Cancel button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking Cancel button cancels deleting of workout and closes modal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking elete workout button delete selected workout and closes the modal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Update Profile Page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=10>Update Profile Form</td>
+        <td rowspan=2>First name input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Optional field. Allows to be left empty.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Last name input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Optional field. Allows to be left empty.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Username input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field validates input to be present.<br>Validate input is a valid username.<br>Display message if username is not valid.<br></td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Focus effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>E-mail input</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Optional field. Allows to be left empty.<br>Validate input is an email address.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Update Profile button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button submit the form and redirects to the User Profile page.<br>Updates user profile info if form is valid.<br>Display message if user profile is successfully updated.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Staff Panel page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Search Bar</td>
+        <td rowspan=2>Input field</td>
+        <td rowspan=2>Admins or staff members</td>
+        <td>Functionality</td>
+        <td>Placeholder "Search Boooking" shows as expected.<br>Text can be entered in the field.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=6>Delete icon/button</td>
+        <td rowspan=2>Delete Workout icon/button</td>
+        <td rowspan=2>Admins or staff members</td>
+        <td>Functionality</td>
+        <td>Clicking Delete Workout button opens confirmation modal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=4>Delete confirmation modal</td>
+        <td rowspan=2>Cancel button</td>
+        <td rowspan=2>Admins or staff members</td>
+        <td>Functionality</td>
+        <td>Clicking Cancel button cancels deleting of workout and closes modal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Delete button</td>
+        <td rowspan=2>Admins or staff members</td>
+        <td>Functionality</td>
+        <td>Clicking elete workout button delete selected workout and closes the modal.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Book Workout page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=4>Select element</td>
+        <td rowspan=2>Workout selector</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking on "Select Workout" selector all bookable workouts shows up.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=2>Date selector</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking on "Select Date" selector, Datepicker calender shows up.<br>Placeholder "Select Date" shows as expected.<br>Field validates input to be present.<br>Display message if date is not valid.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Custom CSS</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=4>Online Booking page buttons</td>
+        <td rowspan=2>Continue button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button redirects user to Booking submit page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Back button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the Back button cancels the booking process and redirects user to User Profile page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>
+
+#### Book Workout Submit page
+
+<table>
+    <tr>
+        <th colspan=2>Feature</th>
+        <th>Users</th>
+        <th>Test</th>
+        <th>Outcome</th>
+        <th>Pass/Fail</th>
+    </tr>
+    <tr>
+        <td rowspan=2>Select element</td>
+        <td rowspan=2>Time selector</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Clicking on "Time" selector all bookable times shows up.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
+        <td rowspan=4>Online Booking page buttons</td>
+        <td rowspan=2>Book Workout button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the button saves the booking and redirects user to User Profile page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Back button</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the Back button redirects user to previous Booking workout page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+</table>

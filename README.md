@@ -500,6 +500,7 @@ This resources were used as a help to create [GenStar Fitness](https://genstar-f
     * Code Institute [README template](https://github.com/Code-Institute-Solutions/readme-template)
     * GitHubs [Basic writing and formatting syntax](https://docs.github.com/ru/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings)
     * Hints and some structure of README files from existing projects from other CI students
+    * [josswe26 code-buddy project readme](https://github.com/josswe26/code-buddy.git) as a perfect example how readme file should looke like
 
 ### Media
 

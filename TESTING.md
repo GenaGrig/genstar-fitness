@@ -211,7 +211,7 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=32></td>Navigation Bar</td>
+        <td rowspan=32>Navigation Bar</td>
         <td rowspan=2>Main logo link</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
@@ -589,7 +589,6 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=2>Send</td>
         <td rowspan=2>Send button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
@@ -664,7 +663,6 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td>Pass</td>
     </tr>
     <tr>
-        <td rowspan=2>Submit</td>
         <td rowspan=2>Submit button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
@@ -1010,7 +1008,7 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=6>Delete icon/button</td>
+        <td rowspan=2>Delete icon/button</td>
         <td rowspan=2>Delete Workout icon/button</td>
         <td rowspan=2>Admins or staff members</td>
         <td>Functionality</td>

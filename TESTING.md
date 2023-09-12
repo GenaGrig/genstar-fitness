@@ -211,7 +211,7 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <th>Pass/Fail</th>
     </tr>
     <tr>
-        <td rowspan=14>Navigation Bar</td>
+        <td rowspan=32></td>Navigation Bar</td>
         <td rowspan=2>Main logo link</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>

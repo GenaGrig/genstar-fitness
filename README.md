@@ -184,7 +184,7 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Membership Page image](/media/screenshots/desktop/membership-page-desktop.png) | ![Mobile Membership Page image ](/media/screenshots/mobile/membership-page-mobile-res.jpg) |
 
-Membership page has information about different membership types and which preferences each type gives. There are three types of membership, such as Standard, Student and All Inclusive, each with its own benefits. The button "Buy membership" should link to checkout page, but for now it is disabled, as payment module is not necessary in this project and hard to implement. 
+Membership page has information about different membership types and which preferences each type gives. There are three types of membership, such as Standard, Student and All Inclusive, each with its own benefits. The button "Buy membership" should link to checkout page, but for now it redirects to Contact Us page, as payment module is not necessary in this project and hard to implement. 
 * As a future option, membership role will affect booking opportunities, as some membership roles contains exclusive offers
 * As a future change, workouts can book only fitness club members (now it can do everyone, who has an active account) or those who have free pass or onetime payment
 
@@ -200,7 +200,7 @@ Desktop | Mobile |
 --- | --- |
 ![Desktop Personal Trainer Page image](/media/screenshots/desktop/personal-trainer-page-desktop.png) | ![Mobile Personal Trainer Page image ](/media/screenshots/mobile/personal-trainer-page-mobile-res.jpg) |
 
-Personal trainers' page has general information about who are personal trainers and with what questions they can help with. Page contains a contact form for the questions regarding personal training, where user can choose a category that suits to users question or leave it as general question. Right now form does not work as planned and it will be fixed in future releases. 
+Personal trainers' page has general information about who are personal trainers and with what questions they can help with. Page contains a contact form for the questions regarding personal training, where user can choose a category that suits to users question or leave it as general question. Right now submitting the personal trainers contact form leads to return of dump form page from Code Institute, to confirm that everything was done correctly and data was submitted to back-end. As a future feature, sending emails with submission of this form will be implemented.
 
 ### Contact page
 Desktop | Mobile |
@@ -210,6 +210,8 @@ Desktop | Mobile |
 Contact page contains two general elements, Google map and contact form. It contains also a general contact information, but as it duplicates with footer, it is made just for good-looking symmetry. 
 
 Google maps API is responsive and change its size according to screen size. Two containers with contact information and form are also responsive and all elements on a page has a column structure on small screen sizes. 
+
+Right now submitting the contact form leads to return of dump form page from Code Institute, to confirm that everything was done correctly and data was submitted to back-end. As a future feature, sending emails with submission of this form will be implemented.
 
 ### Terms of Use pages
 

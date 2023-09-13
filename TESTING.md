@@ -500,8 +500,8 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td rowspan=2>Buy membership buttons</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the Buy membership button should redirect user to check out page.</td>
-        <td><span style="color:red">Not available now</span></td>
+        <td>Clicking the Buy membership button redirect user to Contact Us page.</td>
+        <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
@@ -598,8 +598,8 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td rowspan=2>Send button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the button should submit this form.</td>
-        <td><span style="color:red">Error 405</span></td>
+        <td>Clicking the button submits this form and shows returned form data from CI to confirm that form works and submits data to back-end.</td>
+        <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
@@ -657,6 +657,18 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td>Pass</td>
     </tr>
     <tr>
+        <td rowspan=2>Select subject</td>
+        <td rowspan=2>All</td>
+        <td>Functionality</td>
+        <td>Text can be entered in the field.<br>Field is optional and no subject can be chosen.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>N/A</td>
+        <td>N/A</td>
+    </tr>
+    <tr>
         <td rowspan=2>Message</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
@@ -672,8 +684,8 @@ Nokia S7 Plus 6.0" | Android |No appearance, responsiveness nor functionality is
         <td rowspan=2>Submit button</td>
         <td rowspan=2>All</td>
         <td>Functionality</td>
-        <td>Clicking the button should submit this form.</td>
-        <td><span style="color:red">Error 405</span></td>
+        <td>Clicking the button submits this form and shows returned form data from CI to confirm that form works and submits data to back-end</td>
+        <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>

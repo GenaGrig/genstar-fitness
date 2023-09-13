@@ -52,23 +52,32 @@
     </div>
 
     <div class="col" style="background-color: #47a9ff;">
-        <form id="contact-form" action="{% url 'contact' %}" method="post">
+        <form id="contact-form" action="https://formdump.codeinstitute.net" method="post">
             {% csrf_token %}
             {{ form|crispy }}
             <div class="col-md-8 mt-3 offset-md-2">
                 <h5 class="text-center">Send us a message:</h5>
-                <input type="hidden" name="contact_number"> 
                 <div class="mb-3">
                     <label for="user-name" class="form-label" style="color: aliceblue;">Name</label>
-                    <input type="text" class="form-control" id="user-name" name="user_name" placeholder="Name" required>
+                    <input type="text" class="form-control" id="user-name" name="user-name" placeholder="Name" required>
                 </div>
                 <div class="mb-3">
                     <label for="user-email" class="form-label" style="color: aliceblue;">Email address</label>
-                    <input type="email" class="form-control" id="user-email" name="user_email" placeholder="Email" required>
+                    <input type="email" class="form-control" id="user-email" name="user-email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label" style="color: aliceblue;">Subject</label>
+                  <select class="form-select" id="subject" name="user-subject" aria-label="Subjects to select before contacting club">
+                      <option selected>Select subject</option>
+                      <option value="1">Customer service</option>
+                      <option value="2">Buy membership</option>
+                      <option value="3">Booking problems</option>
+                      <option value="4">Other questions</option>
+                  </select>
                 </div>
                 <div class="mb-3">
                     <label for="user-message" class="form-label" style="color: aliceblue;">Message</label>
-                    <textarea class="form-control" id="user-message" rows="3" name="user_message" placeholder="Your message here..." required></textarea>
+                    <textarea class="form-control" id="user-message" rows="3" name="user-message" placeholder="Your message here..." required></textarea>
                 </div>
                 <button class="btn btn-primary d-grid col-6 mx-auto text-center" type="submit"
                     style="margin-top: 10px; margin-bottom: 10px; padding: 0px 30px; text-align: center" value="Send">Send</button>

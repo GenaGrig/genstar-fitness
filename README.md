@@ -81,7 +81,8 @@ GitHub repository you can find here - [GitHub repo](https://github.com/GenaGrig/
 * As a Site User, I can have all CRUD functionality so that I can create, see, edit and delete my bookings
 
 At the start of the project user stories looked like this:
-![Screenshot of user stories at the start on GitHub](/media/screenshots/user-stories-to-do.PNG)
+
+![Screenshot of user stories at the start on GitHub](/media/screenshots/desktop/user-stories-to-do.PNG)
 
 #### Strategy Table
 
@@ -132,16 +133,19 @@ Several main website elements were presented on each page.
 
 #### Navigation bar
 * Main navigation bar
+
 ![Screenshot of main navigation bar](/media/screenshots/desktop/navigation-bar-main.PNG)
 
 Main navigation bar contains all the necessary buttons for user to get all the information about fitness club services, memberships and contacts. 
 
 * User logged in navigation bar
+
 ![Screenshot of navigation bar when user logged in](/media/screenshots/desktop/navigation-bar-logged-in.PNG)
 
 When user is authenticated, on main navigation bar adds three new buttons such as "Book Workout" - as direct link to booking service, "My Profile" - page where user can see all his bookings, edit or delete them; edit profile; make new bookings and "Logout" to logout from account.
 
 * Navigation bar on user profile / booking page
+
 ![Screenshot of navigation bar on user profile/booking page](/media/screenshots/desktop/navigation-bar-booking.PNG)
 
 This is navigation bar which is shown when user clicks on "Book Workout" or "My Profile" buttons after user is authenticated. On this navbar you can see "Staff Panel" button, which is only available to users which have roles as admins or staff members. This button opens a page where staff members or admins can see all the bookings made by users, filter them or delete. More about this button you can find in [THIS](#staff-panel-page) section.

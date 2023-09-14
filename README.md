@@ -1,4 +1,7 @@
-![GenStar Fitness main page screenshot](/media/screenshots/desktop/main-page-desktop.png)
+Desktop | Mobile |
+--- | --- |
+![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |
+
 
 # Genstar Fitness
 
@@ -195,7 +198,7 @@ Menu main | Menu auth | Menu profile |
 
 [Back to top ⇧](#genstar-fitness)
 
-### Main page
+### Home page
 Desktop | Mobile |
 --- | --- |
 ![Desktop Home Page image](/media/screenshots/desktop/main-page-desktop.png) | ![Mobile Home Page image ](/media/screenshots/mobile/main-page-mobile-res.jpg) |

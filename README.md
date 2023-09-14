@@ -105,6 +105,27 @@ Based on strategy table, not all the features will be implemented in the first d
 * Social media signup
 * Ability to buy membership
 
+### Skeleton
+
+#### Wireframes
+
+[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
+
+Page | Desktop Version | Mobile Version
+--- | --- | ---
+Home page | ![Desktop home page image](/media/wireframes/home-page-desktop.png) | ![Mobile home page image](/media/wireframes/home-page-mobile.png)
+Membership | ![Desktop membership wireframe image](/media/wireframes/membership-page-desktop.png) | ![Mobile membership wireframe image](/media/wireframes/membership-page-mobile.png)
+Workouts | ![Desktop workouts wireframe image](/media/wireframes/workouts-page-desktop.png) | ![Mobile workouts wireframe image](/media/wireframes/workouts-page-mobile.png)
+PT | ![Desktop personal trainer wireframe image](/media/wireframes/pt-page-desktop.png) | ![Mobile personal trainer wireframe image](/media/wireframes/pt-page-mobile.png)
+Contact Us | ![Desktop contact page wireframe image](/media/wireframes/contact-page-desktop.png) | ![Mobile contact page wireframe image](/media/wireframes/contact-page-mobile.png)
+Login page | ![Desktop login wireframe image](/media/wireframes/login-page-desktop.png) | ![Mobile login wireframe image](/media/wireframes/login-page-mobile.png)
+Register page | ![Desktop register new user wireframe image](/media/wireframes/register-page-desktop.png) | ![Mobile register new user wireframe image](/media/wireframes/register-page-mobile.png)
+User profile / User signed in | ![Desktop user profile wireframe image](/media/wireframes/user-panel-desktop.png) | ![Mobile user profile wireframe image](/media/wireframes/user-panel-mobile.png)
+Staff page / Admin or staff members signed in | ![Desktop staff panel wireframe image](/media/wireframes/staff-panel-desktop.png) | ![Mobile staff panel wireframe image](/media/wireframes/staff-panel-mobile.png)
+Booking page / User signed in | ![Desktop booking wireframe image](/media/wireframes/book-workout-desktop.png) | ![Mobile booking wireframe image](/media/wireframes/book-workout-mobile.png)
+Booking submit / User signed in | ![Desktop booking submit wireframe image](/media/wireframes/booking-submit-desktop.png) | ![Mobile booking submit wireframe image](/media/wireframes/booking-submit-mobile.png)
+Logout page / User signed in | ![Desktop logout wireframe image](/media/wireframes/logout-desktop.png) | ![Mobile logout wireframe image](/media/wireframes/logout-mobile.png)
+
 ### Structure
 
 ![Structure of the Genstar Fitness website](/media/screenshots/desktop/genstar-fitness-structure.png)

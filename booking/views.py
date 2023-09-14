@@ -86,7 +86,7 @@ def bookingSubmit(request):
                         or date == 'Sunday':
                     if Appointment.objects.filter(day=day).count() < 30:
                         if Appointment.objects.filter(day=day, time=time)\
-                                .count() < 30:
+                                .count() < 10:
                             AppointmentForm = \
                                 Appointment.objects.get_or_create(
                                     user=user,
@@ -206,7 +206,7 @@ def userUpdateSubmit(request, id):
                         or date == 'Sunday':
                     if Appointment.objects.filter(day=day).count() < 30:
                         if Appointment.objects.filter(day=day, time=time)\
-                                .count() < 30 or userSelectedTime == time:
+                                .count() < 10 or userSelectedTime == time:
                             appointment = Appointment.objects.filter(pk=id)\
                                     .update(
                                 user=user,
@@ -286,7 +286,7 @@ def checkTime(times, day):
     # Only show the time of the day that has not been selected before:
     x = []
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 30:
+        if Appointment.objects.filter(day=day, time=k).count() < 20:
             x.append(k)
     return x
 
@@ -297,7 +297,7 @@ def checkEditTime(times, day, id):
     appointment = Appointment.objects.get(pk=id)
     time = appointment.time
     for k in times:
-        if Appointment.objects.filter(day=day, time=k).count() < 30 \
+        if Appointment.objects.filter(day=day, time=k).count() < 20 \
                 or time == k:
             x.append(k)
     return x
@@ -317,24 +317,6 @@ def delete_booking_staff(request, id):
     appointment.delete()
     messages.success(request, "Booking Deleted!")
     return redirect('staffPanel')
-
-
-def is_booking_allowed(workout_type, date, time_slot):
-    # Count existing bookings for the given workout type, date, and time slot
-    existing_bookings_count = Appointment.objects.filter(
-        workout_type=workout_type,
-        date=date,
-        time_slot=time_slot,
-    ).count()
-
-    # Set the maximum booking limit per hour for each workout type
-    max_booking_limit = 20
-
-    # Check if the booking limit has been reached
-    if existing_bookings_count >= max_booking_limit:
-        return False
-    else:
-        return True
 
 
 def update_profile(request):

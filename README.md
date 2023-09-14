@@ -1,3 +1,5 @@
+![GenStar Fitness main page screenshot](/media/screenshots/desktop/main-page-desktop.png)
+
 # Genstar Fitness
 
 Genstar Fitness is a web site for a local fitness club and gym with full functionality to its user, allowing getting all necessary information about fitness services, prices and additional services. Web site allows user to create account, login and logout, change users information and most importantly book different workouts, see them in convenient form, edit and delete them.
